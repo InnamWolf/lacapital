@@ -10,23 +10,16 @@
   =================================================-->
   <link rel="stylesheet" href="view/src/css/main.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>  
-  <!-- Carrusel -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>    
   <!-- Normalize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
   <!--===============================================
   lib js
-  =================================================-->  
-  <!-- Jquery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- Carousel -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  =================================================-->    
 
-  <link rel="icon" href="view/src/img/icono.png" sizes="64x64">
+  <!-- <link rel="icon" href="view/src/img/icono.png" sizes="64x64"> -->
 
-  <title>Ignilytic - TI</title>
+  <title>Sorteos la Capital</title>
 
 </head>
 
@@ -38,16 +31,15 @@
       //* ===============================================
       //* Mobile and PC Menu
       //* ===============================================
-      include_once 'view/components/menu.php';
+      // include_once 'view/components/menu.php';
 
       //* ===============================================
       //* White List URL
       //* ===============================================
       if(isset($_GET["url"])){
 
-        if($_GET["url"] == "inicio" ||
-           $_GET["url"] == "servicios" ||
-           $_GET["url"] == "web"
+        if($_GET["url"] == "inicio"
+          
          
         ){
 
@@ -64,12 +56,12 @@
       //* ===============================================
       //* Footer
       //* ===============================================
-      include_once 'view/components/footer.php';
+      // include_once 'view/components/footer.php';
     ?>
 
   </div>
 
-  <script src="view/src/js/main.js"></script>
+  <!-- <script src="view/src/js/main.js"></script> -->
 
 </body>
 
