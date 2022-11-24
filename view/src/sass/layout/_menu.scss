@@ -2,36 +2,86 @@
 // * Nav Movil
 // * ===============================================
 .navMovil{
+
   background: $red;
-}
 
-.navMostar{
-  padding: 10px;
-  font-size: 30px;
-}
-
-.navMovInterno__items{
-  display: none;
-  img{
-    height: 100px;
-    display: block;
-    margin: auto;    
-  }
-  .navMovInterno__link{
-    text-align: center;
-    color: $white;
-    &:nth-child(2)
-    ,&:nth-child(3)
-    ,&:nth-child(4)
-    ,&:nth-child(5){    
-      border-bottom: 4px solid $redB;
-    }
-    &:nth-child(6){
-      border-bottom:none;
-    }
-    h2{      
-      margin: 0;
-    }
-    padding: 10px;
+  @include desktop(){
+    display: none;
   }  
+
+  .navMostar{
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  .navMovInterno__items{
+    display: none;
+    img{
+      height: 100px;
+      display: block;
+      margin: auto;    
+    }
+
+    .navMovInterno__link{
+      text-align: center;
+      color: $white;
+      &:nth-child(2)
+      ,&:nth-child(3)
+      ,&:nth-child(4)
+      ,&:nth-child(5){    
+        border-bottom: 4px solid $redB;
+      }
+      &:nth-child(6){
+        border-bottom:none;
+      }
+      h2{      
+        margin: 0;
+      }
+      padding: 10px;
+    } 
+
+  }
+
+}
+
+// * ===============================================
+// * Nav Desktop
+// * ===============================================
+.navDesktop{  
+
+  display: none;  
+  @include desktop(){ 
+    display: block;   
+  }
+
+  background: $red;
+
+  .navCentro{    
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center; 
+    position: relative;     
+
+    .navCentro__logo{
+      img{
+        height: 150px;        
+        position: absolute; 
+        top: 10px;
+
+      }
+    }
+
+    .navCentro__items{      
+      display: flex;
+      justify-content: space-around;
+      width: 900px;
+      padding: 20px;
+      a{
+        color: $white;
+      }
+    }
+  }
+
 }
