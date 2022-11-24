@@ -16,7 +16,8 @@
   <!--===============================================
   lib js
   =================================================-->    
-
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- <link rel="icon" href="view/src/img/icono.png" sizes="64x64"> -->
 
   <title>Sorteos la Capital</title>
@@ -31,7 +32,7 @@
       //* ===============================================
       //* Mobile and PC Menu
       //* ===============================================
-      // include_once 'view/components/menu.php';
+      include_once 'view/components/menu.php';
 
       //* ===============================================
       //* White List URL
@@ -61,7 +62,7 @@
 
   </div>
 
-  <!-- <script src="view/src/js/main.js"></script> -->
+  <script src="view/src/js/main.js"></script>
 
 </body>
 

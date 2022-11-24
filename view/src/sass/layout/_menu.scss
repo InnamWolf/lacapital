@@ -1,0 +1,37 @@
+// * ===============================================
+// * Nav Movil
+// * ===============================================
+.navMovil{
+  background: $red;
+}
+
+.navMostar{
+  padding: 10px;
+  font-size: 30px;
+}
+
+.navMovInterno__items{
+  display: none;
+  img{
+    height: 100px;
+    display: block;
+    margin: auto;    
+  }
+  .navMovInterno__link{
+    text-align: center;
+    color: $white;
+    &:nth-child(2)
+    ,&:nth-child(3)
+    ,&:nth-child(4)
+    ,&:nth-child(5){    
+      border-bottom: 4px solid $redB;
+    }
+    &:nth-child(6){
+      border-bottom:none;
+    }
+    h2{      
+      margin: 0;
+    }
+    padding: 10px;
+  }  
+}

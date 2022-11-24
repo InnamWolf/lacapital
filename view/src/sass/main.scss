@@ -1,0 +1,18 @@
+//*Compilar SASS: sass --watch view/src/sass/main.scss:view/src/css/main.css --style compressed
+
+// * ===============================================
+// * UTILITIES
+// * ===============================================
+@import 'utilities/variables.scss';
+@import 'utilities/mixin.scss';
+
+// * ===============================================
+// * BASE
+// * ===============================================
+@import 'base/typo.scss';
+@import 'base/body.scss';
+
+// * ===============================================
+// * Layout
+// * ===============================================
+@import 'layout/menu.scss';
