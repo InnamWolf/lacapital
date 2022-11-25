@@ -57,7 +57,7 @@
       //* ===============================================
       //* Footer
       //* ===============================================
-      // include_once 'view/components/footer.php';
+      include_once 'view/components/footer.php';
     ?>
 
   </div>
