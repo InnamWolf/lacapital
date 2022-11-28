@@ -39,7 +39,8 @@
       //* ===============================================
       if(isset($_GET["url"])){
 
-        if($_GET["url"] == "inicio"
+        if( $_GET["url"] == "inicio" ||
+            $_GET["url"] == "aviso"
           
          
         ){

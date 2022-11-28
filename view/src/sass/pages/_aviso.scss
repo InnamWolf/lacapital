@@ -1,0 +1,68 @@
+.aviso{
+  
+  margin: auto;
+  width: 95%;
+
+  @include desktop{
+    width: 1200px;
+  }
+
+  .aviso__top{ 
+    background: $redB;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: $white;
+    width: 95%;
+    @include desktop{
+      width: 1200px;
+    }
+    
+    h1{
+      text-align: center;
+    }
+
+    .txt__blue{
+      @include mxBlue();
+    }
+
+    p{
+      text-align: justify;
+    }    
+  }
+
+  .aviso__contenido{
+    width: 95%;
+    background: $white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+
+    @include desktop{
+      width: 1200px;
+    }
+
+    h2{
+      text-align: center;
+    }
+
+    .txt__blue{
+      @include mxBlue();
+    }
+
+    p{
+      text-align: justify;
+    }
+
+    .aviso__titulos{      
+      font-weight: bold; 
+      display: block;
+      margin-top: 20px;
+      text-align: center;           
+      
+    }
+
+  }
+
+  
+}
