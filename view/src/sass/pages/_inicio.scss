@@ -158,12 +158,12 @@
         }
       }
       img {
-        height: 200px;
+        height: 150px;
         margin: auto;
         margin-top: 20px;
         display: block;
         @include desktop {
-          height: 320px;
+          height: 250px;
         }
       }
     }
