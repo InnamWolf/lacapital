@@ -1,0 +1,192 @@
+.capital {
+  // * ===============================================
+  // * IMAGEN PRINCIPAL
+  // * ===============================================
+
+  .imgTop {
+    background-image: url('../img/premio.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 300px;
+    position: relative;
+    @include tablet {
+      height: 400px;
+      background-position-y: 40%;
+    }
+    @include desktop {
+      height: 600px;
+      margin: auto;
+      margin-top: 50px;
+      background-size: cover;
+      background-position: 0px -60px;
+    }
+  }
+  .btnComprar {
+    a {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      background: $lemon;
+      margin: auto;
+      width: 200px;
+      color: $white;
+      font-weight: bold;
+      font-size: 24px;
+      border-radius: 5px;
+      padding: 18px;
+      position: absolute;
+      left: 18%;
+      top: 20px;
+      border: solid $white 4px;
+
+      @include tablet {
+        left: 35%;
+      }
+      @include desktop {
+        width: 300px;
+        left: 40%;
+        right: 40%;
+      }
+    }
+  }
+
+  // * ===============================================
+  // * PREGUNTAS FRECUENTES
+  // * ===============================================
+
+  .preguntas {
+    margin: auto;
+    margin-top: 30px;
+    .inPreguntas {
+      h3 {
+        color: $redB;
+      }
+      .response {
+        padding-bottom: 10px;
+      }
+      .colorAzul {
+        color: $blue;
+        font-weight: bold;
+      }
+      .colorVerde {
+        color: $green;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .txtNota {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .redes {
+        text-align: center;
+      }
+      a {
+        padding-left: 10px;
+      }
+      @include desktop {
+        width: 1150px;
+        margin: auto;
+      }
+    }
+  }
+
+  // * ===============================================
+  // * NOSOTROS
+  // * ===============================================
+
+  .nosotros {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    .inImg {
+      background: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(10, 10, 10)),
+        url('../img/premio.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 500px;
+      position: relative;
+      @include tablet {
+        height: 400px;
+        background-position-y: 40%;
+      }
+      @include desktop {
+        height: 600px;
+        margin: auto;
+        background-size: cover;
+        background-position: 0px -60px;
+      }
+    }
+    .txtNosotros {
+      padding: 20px;
+      color: $white;
+      font-size: 18px;
+      font-weight: bold;
+      @include tablet {
+        font-size: 18px;
+      }
+      @include desktop {
+        font-size: 38px;
+      }
+    }
+    .imgLogo {
+      img {
+        height: 150px;
+      }
+    }
+  }
+
+  // * ===============================================
+  // * CONTACTO
+  // * ===============================================
+
+  .contacto {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    .inContacto {
+      p {
+        font-size: 24px;
+      }
+      a {
+        padding-left: 10px;
+      }
+      .imgInfo {
+        background: $blackL;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 150px;
+        width: 400px;
+        position: relative;
+        margin: auto;
+        margin-top: 10px;
+      }
+      @include desktop {
+        width: 1150px;
+        margin: auto;
+      }
+    }
+  }
+
+  // * ===============================================
+  // * WHATSAPP
+  // * ===============================================
+
+  .whatsapp {
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .titleTitulo {
+    @include titleWhite();
+  }
+  .linea {
+    border-bottom: solid 3px $redB;
+  }
+  .fa-brands {
+    font-size: 64px;
+  }
+}
