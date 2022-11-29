@@ -1,0 +1,219 @@
+.capital {
+  .titleTitulo {
+    @include titleWhite();
+  }
+  .linea {
+    border-bottom: solid 3px $redB;
+  }
+  .fa-whatsapp {
+    color: $green;
+  }
+  .fa-facebook {
+    color: $blue;
+  }
+  // * ===============================================
+  // * IMAGEN PRINCIPAL
+  // * ===============================================
+  .imgTop {
+    background-image: url('../img/premio.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 300px;
+    padding-top: 30px;
+    @include tablet {
+      height: 400px;
+      background-position-y: 40%;
+    }
+    @include desktop {
+      height: 600px;
+      margin: auto;
+      padding-top: 50px;
+      background-size: cover;
+      background-position: 0px -60px;
+    }
+  }
+  .btnComprar {
+    a {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      background: $lemon;
+      margin: auto;
+      width: 200px;
+      color: $white;
+      font-weight: bold;
+      font-size: 24px;
+      border-radius: 5px;
+      padding: 18px;
+      top: 30px;
+      border: solid $white 4px;
+
+      @include tablet {
+        left: 35%;
+      }
+      @include desktop {
+        width: 300px;
+        left: 40%;
+        right: 40%;
+      }
+    }
+  }
+
+  // * ===============================================
+  // * PREGUNTAS FRECUENTES
+  // * ===============================================
+
+  .preguntas {
+    margin: auto;
+    margin-top: 20px;
+    .inPreguntas {
+      width: 95%;
+      margin: auto;
+      h3 {
+        color: $redB;
+        text-align: center;
+        @include tablet {
+          text-align: left;
+        }
+      }
+      .colorAzul {
+        color: $blue;
+        font-weight: bold;
+      }
+      .colorVerde {
+        color: $green;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .txtNota {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .redes {
+        p {
+          text-align: center;
+          margin: 0px;
+        }
+        .redes__iconos {
+          display: flex;
+          width: 200px;
+          margin: auto;
+          margin-top: 10px;
+          justify-content: center;
+          a {
+            font-size: 64px;
+            margin: 10px;
+            margin-bottom: 0px;
+          }
+        }
+      }
+      @include desktop {
+        width: 1150px;
+        margin: auto;
+      }
+    }
+  }
+
+  // * ===============================================
+  // * NOSOTROS
+  // * ===============================================
+
+  .nosotros {
+    margin: auto;
+    margin-top: 20px;
+    h2 {
+      margin: 0px;
+    }
+    .inImg {
+      background: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(10, 10, 10)),
+        url('../img/premio.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 410px;
+      @include tablet {
+        height: 350px;
+      }
+      @include desktop {
+        height: 600px;
+      }
+      .txtNosotros {
+        p {
+          text-align: center;
+          margin: 0px;
+          padding-top: 40px;
+        }
+        width: 95%;
+        margin: auto;
+        color: $white;
+        font-size: 18px;
+        font-weight: bold;
+        @include tablet {
+          font-size: 18px;
+        }
+        @include desktop {
+          font-size: 38px;
+        }
+      }
+      .imgLogo {
+        width: 200px;
+        margin: auto;
+        margin-top: 20px;
+        img {
+          height: 150px;
+          @include desktop {
+            height: 280px;
+          }
+        }
+        @include desktop {
+          margin-left: 37%;
+          margin-right: 43%;
+        }
+      }
+    }
+  }
+
+  // * ===============================================
+  // * CONTACTO
+  // * ===============================================
+
+  .contacto {
+    margin: 0px;
+    h2 {
+      margin: 0px;
+    }
+    .inContacto {
+      width: 95%;
+      margin: auto;
+      p {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 0px;
+        text-align: center;
+      }
+      .contacto__iconos {
+        display: flex;
+        width: 200px;
+        margin: auto;
+        justify-content: center;
+        a {
+          font-size: 64px;
+          margin: 10px;
+        }
+      }
+      .imgInfo {
+        background: $blackL;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 115px;
+        width: 275px;
+        position: relative;
+        margin: auto;
+        margin-top: 10px;
+      }
+    }
+  }
+}

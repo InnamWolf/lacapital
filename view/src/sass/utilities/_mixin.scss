@@ -26,3 +26,35 @@
 @mixin mxBlue{
   color: $blue;
 }
+=======
+// * ===============================================
+// * Mixing Responsive
+// * ===============================================
+
+@mixin tablet {
+  @media only screen and (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+// * ===============================================
+// * FONT BOLD
+// * ===============================================
+
+@mixin mxBold {
+  font-weight: bold;
+}
+
+@mixin titleWhite {
+  background: $redB;
+  color: $white;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+
