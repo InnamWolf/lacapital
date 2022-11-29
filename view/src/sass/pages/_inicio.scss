@@ -145,8 +145,6 @@
           margin: 0px;
           padding-top: 40px;
         }
-        width: 95%;
-        margin: auto;
         color: $white;
         font-size: 18px;
         font-weight: bold;
@@ -155,21 +153,17 @@
         }
         @include desktop {
           font-size: 38px;
+          width: 1150px;
+          margin: auto;
         }
       }
-      .imgLogo {
-        width: 200px;
+      img {
+        height: 150px;
         margin: auto;
         margin-top: 20px;
-        img {
-          height: 150px;
-          @include desktop {
-            height: 280px;
-          }
-        }
+        display: block;
         @include desktop {
-          margin-left: 37%;
-          margin-right: 43%;
+          height: 250px;
         }
       }
     }
