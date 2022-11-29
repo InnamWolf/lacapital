@@ -140,13 +140,13 @@
         height: 600px;
       }
       .txtNosotros {
+        width: 95%;
+        margin: auto;
         p {
           text-align: center;
           margin: 0px;
           padding-top: 40px;
         }
-        width: 95%;
-        margin: auto;
         color: $white;
         font-size: 18px;
         font-weight: bold;
@@ -157,19 +157,13 @@
           font-size: 38px;
         }
       }
-      .imgLogo {
-        width: 200px;
+      img {
+        height: 200px;
         margin: auto;
         margin-top: 20px;
-        img {
-          height: 150px;
-          @include desktop {
-            height: 280px;
-          }
-        }
+        display: block;
         @include desktop {
-          margin-left: 37%;
-          margin-right: 43%;
+          height: 320px;
         }
       }
     }

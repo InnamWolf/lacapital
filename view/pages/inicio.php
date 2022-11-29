@@ -49,7 +49,7 @@
         <p>SORTEOS ENTRE AMIGOS EN BASE A LOTERIA NACIONAL.</p>
         <p>TODOS NUESTROS SORTEOS SE REALIZAN DE FORMA SEGURA Y TRANSPARENTE EN BASE A LOS NÚMEROS GANADORES DE LA LOTERÍA NACIONAL Y CON TRANSMISIÓN EN VIVO.</p>
       </div>
-      <div class="imgLogo"><img src="view/src/img/logo.svg" alt="logo"></div>
+      <img src="view/src/img/logo.svg" alt="logo">
     </div>
   </div>
 
