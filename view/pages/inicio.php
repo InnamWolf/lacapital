@@ -15,16 +15,15 @@
     <h2 class="titleTitulo">PREGUNTAS FRECUENTES</h2>
     <div class="inPreguntas">
       <h3>¿CÓMO SE ELIGE A LOS GANADORES?</h3>
-      <p class="response">Todos nuestros sorteos se realizan en base a la <span class="colorAzul">Lotería Nacional para la Asistencia Pública</span> mexicana.</p>
-      <p class="response">El ganador de Lotto Sorteos será el participante cuyo número de boleto coincida con las últimas cifras del primer premio ganador de la Lotería Nacional (las fechas serán publicadas en nuestra página oficial).  
-      ​</p>
+      <p>Todos nuestros sorteos se realizan en base a la <span class="colorAzul">Lotería Nacional para la Asistencia Pública</span> mexicana.</p>
+      <p>El ganador de Lotto Sorteos será el participante cuyo número de boleto coincida con las últimas cifras del primer premio ganador de la Lotería Nacional (las fechas serán publicadas en nuestra página oficial).​</p>
 
       <h3>¿QUÉ SUCEDE CUANDO EL NÚMERO GANADOR ES UN BOLETO NO VENDIDO?</h3>
-      <p class="response">Se elige un nuevo ganador realizando la misma dinámica en otra fecha cercana (se anunciará la nueva fecha).</p>
-      <p class="response">Esto significa que, ¡Tendrías el doble de oportunidades de ganar con tu mismo boleto!. </p>
+      <p>Se elige un nuevo ganador realizando la misma dinámica en otra fecha cercana (se anunciará la nueva fecha).</p>
+      <p>Esto significa que, ¡Tendrías el doble de oportunidades de ganar con tu mismo boleto!. </p>
 
       <h3>¿DÓNDE SE PUBLICA A LOS GANADORES?</h3>  
-      <p class="response">En nuestra página oficial de Facebook <span class="colorAzul">SORTEOS LA CAPITAL</span> puedes encontrar todos y cada uno de nuestros sorteos anteriores, así como las transmisiones en vivo con Lotería Nacional y las entregas de premios a los ganadores!​</p>
+      <p>En nuestra página oficial de Facebook <span class="colorAzul">SORTEOS LA CAPITAL</span> puedes encontrar todos y cada uno de nuestros sorteos anteriores, así como las transmisiones en vivo con Lotería Nacional y las entregas de premios a los ganadores!​</p>
       <div class="linea"></div>
       <p class="txtNota">Cláusula para participar: Los clientes o compradores de boletos deberán esperar la confirmación de compra para poder ir participando dentro del sorteo.​</p>
 
@@ -32,8 +31,10 @@
 
       <div class="redes">
         <p class="colorVerde">ENVÍANOS TUS PREGUNTAS A</p>
-        <a href="#"><i class="fa-brands fa-whatsapp"></i><a>
-        <a href="#"><i class="fa-brands fa-facebook"></i><a>
+        <div class="redes__iconos">
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
       </div>
     </div>
   </div>
@@ -44,8 +45,10 @@
   <div class="nosotros" id="nosotros">
     <h2 class="titleTitulo">NOSOTROS</h2>
     <div class="inImg">
-      <p class="txtNosotros">SORTEOS ENTRE AMIGOS EN BASE A LOTERIA NACIONAL.</p>
-      <p class="txtNosotros">TODOS NUESTROS SORTEOS SE REALIZAN DE FORMA SEGURA Y TRANSPARENTE EN BASE A LOS NÚMEROS GANADORES DE LA LOTERÍA NACIONAL Y CON TRANSMISIÓN EN VIVO.</p>
+      <div class="txtNosotros">
+        <p>SORTEOS ENTRE AMIGOS EN BASE A LOTERIA NACIONAL.</p>
+        <p>TODOS NUESTROS SORTEOS SE REALIZAN DE FORMA SEGURA Y TRANSPARENTE EN BASE A LOS NÚMEROS GANADORES DE LA LOTERÍA NACIONAL Y CON TRANSMISIÓN EN VIVO.</p>
+      </div>
       <div class="imgLogo"><img src="view/src/img/logo.svg" alt="logo"></div>
     </div>
   </div>
@@ -57,8 +60,10 @@
     <h2 class="titleTitulo">CONTACTO</h2>
     <div class="inContacto">
       <p>WHATSAPP: (XX) XXXX XXXX</p>
-      <a href="#"><i class="fa-brands fa-whatsapp"></i><a>
-      <a href="#"><i class="fa-brands fa-facebook"></i><a>
+      <div class="contacto__iconos">
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </div>
       <div class="imgInfo"></div>
     </div>
   </div>
@@ -68,7 +73,7 @@
   =================================================-->
   <div class="whatsapp">
     <h2 class="titleTitulo">PREGUNTAS AL WHATSAPP
-    <br> (XX) XXXX XXXX
+      <br> (XX) XXXX XXXX
     </h2>
   </div>
 
