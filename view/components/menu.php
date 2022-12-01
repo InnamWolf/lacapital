@@ -11,7 +11,7 @@ NAV-MOVIL
     <a class="link navMovInterno__link" href="#nosotros"><h2>Nosotros</h2></a>
     <a class="link navMovInterno__link" href="#contacto"><h2>Contacto</h2></a>
     <a class="link navMovInterno__link" href="#comprar" ><h2>Comprar Boletos</h2></a>
-    <a class="link navMovInterno__link" href="#cuenta" ><h2>Cuentas</h2></a>      
+    <a class="link navMovInterno__link" href="cuentas" ><h2>Cuentas</h2></a>      
   </div>  
 </nav>
 
@@ -26,7 +26,7 @@ NAV DESKTOP
       <a class="link navMovInterno__link" href="#nosotros"><h2>Nosotros</h2></a>
       <a class="link navMovInterno__link" href="#contacto"><h2>Contacto</h2></a>
       <a class="link navMovInterno__link" href="#comprar" ><h2>Comprar Boletos</h2></a>
-      <a class="link navMovInterno__link" href="#cuenta" ><h2>Cuentas</h2></a>     
+      <a class="link navMovInterno__link" href="cuentas" ><h2>Cuentas</h2></a>     
     </div>
   </div>  
 </nav>

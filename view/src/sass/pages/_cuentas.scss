@@ -1,0 +1,16 @@
+.cuentas{
+  img{
+    display: block;
+    margin: auto;  
+    width: 95%;
+    margin-top: 20px;
+    border-radius: 5px;
+    @include tablet(){
+      width: 50%;
+    }
+    @include desktop(){
+      width: 400px;
+    }
+  }
+    
+}
