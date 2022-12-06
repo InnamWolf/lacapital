@@ -29,22 +29,19 @@
   <div class="wrapper">
 
     <?php
-      //* ===============================================
-      //* Mobile and PC Menu
-      //* ===============================================
-      include_once 'view/components/menu.php';
 
       //* ===============================================
       //* White List URL
       //* ===============================================
-      if(isset($_GET["url"])){
+      if(isset($_GET["url"])){        
 
         if( $_GET["url"] == "inicio" ||
             $_GET["url"] == "aviso" ||
-            $_GET["url"] == "cuentas"
-          
-         
+            $_GET["url"] == "cuentas" ||
+            $_GET["url"] == "cpanel"
+
         ){
+
 
           include "pages/".$_GET["url"].".php";
 
@@ -54,12 +51,11 @@
         }
 
       }else{
+          include_once 'view/components/menu.php';
           include "pages/inicio.php";
-      }
-      //* ===============================================
-      //* Footer
-      //* ===============================================
-      include_once 'view/components/footer.php';
+          include_once 'view/components/footer.php';
+      }   
+
     ?>
 
   </div>
