@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>    
   <!-- Normalize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+  <!-- AdminLTD -->
+  <link rel="stylesheet" href="view/src/dist/css/adminlte.min.css">
   <!--===============================================
   lib js
   =================================================-->    
@@ -61,6 +63,13 @@
   </div>
 
   <script src="view/src/js/main.js"></script>
+
+<!-- jQuery -->
+<script src=".view/src/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="view/src/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="view/src/dist/js/adminlte.min.js"></script>
 
 </body>
 
