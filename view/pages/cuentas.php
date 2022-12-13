@@ -4,7 +4,7 @@
   //* ===============================================
   //* Mobile and PC Menu
   //* ===============================================
-  include_once 'view/components/menu.php';
+  // include_once 'view/components/menu.php';
   ?>
 
   <img src="view/src/img/cuentas.jpg" alt="CUENTA">
@@ -15,4 +15,5 @@
   //* ===============================================
   include_once 'view/components/footer.php';
   ?>
+
 </section>

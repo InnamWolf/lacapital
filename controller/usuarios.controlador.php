@@ -22,6 +22,13 @@ class ControladorUsuarios{
 
             if(is_array($respuesta) && $respuesta["usuario"] == $_POST["logUsuario"] && $respuesta["password"] == $_POST["logPassword"]){
               
+              $_SESSION["credencial"] = "ok";
+              
+              echo'
+              <script>
+                window.location = "escritorio";
+              </script>  
+              ';              
 
             }
             else{

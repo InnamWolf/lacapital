@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,23 +15,14 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>    
   <!-- Normalize -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
-  <!-- AdminLTD -->
-  <link rel="stylesheet" href="view/src/dist/css/adminlte.min.css">
-  <!-- Toastr -->
-  <link rel="stylesheet" href="view/src/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>  
   <!--===============================================
   lib js
   =================================================-->    
   <!-- Jquery -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-  <script src="view/src/plugins/jquery/jquery.min.js"></script>
-  <!-- Bootstrap 4 -->
-  <script src="view/src/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- AdminLTE App -->
-  <script src="view/src/dist/js/adminlte.min.js"></script>
-  <!-- Toastr -->
-  <script src="view/src/plugins/sweetalert2/sweetalert2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+  <!-- Menu scroll -->
+  <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script> 
 
   <!-- <link rel="icon" href="view/src/img/icono.png" sizes="64x64"> -->
 
@@ -49,32 +43,41 @@
 
         if( $_GET["url"] == "inicio" ||
             $_GET["url"] == "aviso" ||
-            $_GET["url"] == "cuentas" ||
-            $_GET["url"] == "cpanel"
-
+            $_GET["url"] == "cuentas"            
         ){
 
+          include_once 'view/components/menu.php';
+          include "pages/".$_GET["url"].".php";
+          include_once 'view/components/footer.php';
+
+        }
+        elseif(
+           $_GET["url"] == "cpanel" ||
+           $_GET["url"] == "escritorio"
+        ){
 
           include "pages/".$_GET["url"].".php";
+          
 
-        }else{
+        }
+        else{
 
             include "pages/404.php";
         }
 
       }else{
-          include_once 'view/components/menu.php';
-          include "pages/inicio.php";
-          include_once 'view/components/footer.php';
+        include_once 'view/components/menu.php';
+        include "pages/inicio.php";
+        include_once 'view/components/footer.php';
+          
       }   
 
     ?>
 
   </div>
 
-  <script src="view/src/js/main.js"></script>
-
-
+  
+  <script src="view/src/js/main.js"></script>  
 
 </body>
 

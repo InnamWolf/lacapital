@@ -1,48 +1,61 @@
-<section class="login">
 
-  <div class="login-box">
-    <!-- /.login-logo -->
-    <div class="card card-outline card-primary">
-      <div class="card-header text-center">
-        <a href="inicio" class="h1"><b>La Capital</b></a>
-      </div>
-      <div class="card-body">
-        <p class="login-box-msg">Incia sesión para acceder el sistema</p>
+<!DOCTYPE html>
+<html lang="es">
 
-        <form method="post">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Usuario" name="logUsuario">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-user"></span>
-              </div>
-            </div>
-          </div>
-          <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Password" name="logPassword">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-lock"></span>
-              </div>
-            </div>
-          </div> 
-          
-          <button type="submit" class="btn mx-auto d-block btn-outline-primary">Inicia sesión</button>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--===============================================
+  Lib CSS
+  =================================================-->
+  <link rel="stylesheet" href="view/src/css/main.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>      
+  <!-- AdminLTD -->
+  <link rel="stylesheet" href="view/src/dist/css/adminlte.min.css">
+  <!-- SWeetAlert -->
+  <link rel="stylesheet" href="view/src/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!--===============================================
+  lib js
+  =================================================-->    
+  <!-- Jquery -->
+  <script src="view/src/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="view/src/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="view/src/dist/js/adminlte.min.js"></script>
+  <!-- SWeetAlert -->
+  <script src="view/src/plugins/sweetalert2/sweetalert2.min.js"></script>  
 
-          <?php
+  <!-- <link rel="icon" href="view/src/img/icono.png" sizes="64x64"> -->
 
-            $login = new ControladorUsuarios();
-            $login -> ctrIngresoUsuario(); 
+  <title>Sorteos la Capital</title>
 
-          ?>
+</head>
 
-        </form>
+<body>
 
-      </div>
-      <!-- /.card-body -->
-    </div>
-    <!-- /.card -->
-  </div>
-  <!-- /.login-box -->
+  <div class="wrapper">
 
-</section>
+    <?php  
+     
+
+      if(isset($_GET["url"])){        
+
+        if( $_GET["url"] == "cpanel"            
+        ){
+          include "view/pages/login.php";
+
+        }
+
+      }
+    ?>
+
+  </div> 
+  
+
+</body>
+
+</html>
+
