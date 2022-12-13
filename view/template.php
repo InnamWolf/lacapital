@@ -15,11 +15,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
   <!-- AdminLTD -->
   <link rel="stylesheet" href="view/src/dist/css/adminlte.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="view/src/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!--===============================================
   lib js
   =================================================-->    
   <!-- Jquery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  <script src="view/src/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="view/src/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="view/src/dist/js/adminlte.min.js"></script>
+  <!-- Toastr -->
+  <script src="view/src/plugins/sweetalert2/sweetalert2.min.js"></script>
+
   <!-- <link rel="icon" href="view/src/img/icono.png" sizes="64x64"> -->
 
   <title>Sorteos la Capital</title>
@@ -64,12 +74,7 @@
 
   <script src="view/src/js/main.js"></script>
 
-<!-- jQuery -->
-<script src=".view/src/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="view/src/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="view/src/dist/js/adminlte.min.js"></script>
+
 
 </body>
 
