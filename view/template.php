@@ -53,7 +53,9 @@
         }
         elseif(
            $_GET["url"] == "cpanel" ||
-           $_GET["url"] == "escritorio"
+           $_GET["url"] == "escritorio" ||
+           $_GET["url"] == "usuario" ||
+           $_GET["url"] == "salir"
         ){
 
           include "pages/".$_GET["url"].".php";
@@ -75,7 +77,6 @@
     ?>
 
   </div>
-
   
   <script src="view/src/js/main.js"></script>  
 
