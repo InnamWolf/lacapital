@@ -1,9 +1,10 @@
 <?php
 
-session_destroy();
-
-echo'
-  <script>
-    window.location = "cpanel";
-  </script>  
-';   
+  session_destroy();
+  
+  echo'
+    <script>
+      window.location = "cpanel";
+    </script>  
+  ';   
+?>

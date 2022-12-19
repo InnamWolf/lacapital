@@ -1,4 +1,5 @@
 <?php 
+  include ('view/pages/credencial.php');
   include ('view/components/cpanelHeader.php');
 ?>
 <!-- Site wrapper -->

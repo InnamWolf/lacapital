@@ -1,4 +1,5 @@
 <?php 
+  include ('view/pages/credencial.php');
   include ('view/components/cpanelHeader.php');
 ?>
 <!-- Site wrapper -->
@@ -21,7 +22,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="escritorio">Inicio</a></li>
-              <li class="breadcrumb-item active">Escritorio</li>
+              <li class="breadcrumb-item active">Usuario</li>
             </ol>
           </div>
         </div>

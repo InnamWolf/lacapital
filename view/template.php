@@ -1,5 +1,5 @@
 <?php 
-  session_start();
+  session_start();   
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -34,47 +34,39 @@
 
   <div class="wrapper">
 
-    <?php
+  <?php    
+    
+    if(isset($_GET["url"])){ 
 
-      //* ===============================================
-      //* White List URL
-      //* ===============================================
-      if(isset($_GET["url"])){        
-
-        if( $_GET["url"] == "inicio" ||
-            $_GET["url"] == "aviso" ||
-            $_GET["url"] == "cuentas"            
-        ){
-
+      if($_GET["url"] == "inicio" ||
+         $_GET["url"] == "aviso" ||
+         $_GET["url"] == "cuentas" ||
+         $_GET["url"] == "cpanel" ||
+         $_GET["url"] == "salir"  ||
+         $_GET["url"] == "escritorio" ||
+         $_GET["url"] == "usuario"
+      ){
+        if($_GET["url"] == "cpanel" ||
+          $_GET["url"] == "salir" ||
+          $_GET["url"] == "escritorio" ||
+          $_GET["url"] == "usuario")            
+        {
+          include "pages/".$_GET["url"].".php";  
+        }else{
           include_once 'view/components/menu.php';
           include "pages/".$_GET["url"].".php";
           include_once 'view/components/footer.php';
-
         }
-        elseif(
-           $_GET["url"] == "cpanel" ||
-           $_GET["url"] == "escritorio" ||
-           $_GET["url"] == "usuario" ||
-           $_GET["url"] == "salir"
-        ){
-
-          include "pages/".$_GET["url"].".php";
-          
-
-        }
-        else{
-
-            include "pages/404.php";
-        }
-
-      }else{
+      }
+        
+      }        
+      else{
         include_once 'view/components/menu.php';
         include "pages/inicio.php";
         include_once 'view/components/footer.php';
           
-      }   
-
-    ?>
+        } 
+  ?>
 
   </div>
   
