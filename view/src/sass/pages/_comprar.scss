@@ -1,0 +1,108 @@
+.comprar {
+  .titulo {
+    @include titleWhite();
+  }
+  @include desktop {
+    font-size: 24px;
+  }
+  margin: auto;
+  margin-top: 20px;
+  // * ===============================================
+  // * PREMIO PRINCIPAL
+  // * ===============================================
+  .principal {
+    height: 100px;
+    background: $blackL;
+    text-align: center;
+    @include desktop {
+      height: 120px;
+    }
+    .principal__item {
+      width: 95%;
+      margin: auto;
+      p {
+        color: $white;
+        padding: 20px;
+        margin: 0px;
+      }
+    }
+  }
+  // * ===============================================
+  // * IMAGEN
+  // * ===============================================
+  .imagen {
+    margin: auto;
+    margin-top: 20px;
+    .imagen__item {
+      margin: auto;
+      background-image: url('../img/premio.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 150px;
+      width: 350px;
+      border: solid 3px $redB;
+      @include desktop {
+        height: 450px;
+        width: 850px;
+      }
+    }
+  }
+  // * ===============================================
+  // * COSTO BOLETOS
+  // * ===============================================
+  .costo {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    h2 {
+      color: $redB;
+      margin-bottom: 15px;
+    }
+    .costo__item {
+      height: 335px;
+      background: $blackL;
+      padding-top: 20px;
+      @include desktop {
+        height: 400px;
+      }
+      p {
+        color: $white;
+        margin: 8px;
+      }
+    }
+  }
+  // * ===============================================
+  // * PREMIOS
+  // * ===============================================
+  .premios {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    h3 {
+      color: $redB;
+      margin: 0px;
+    }
+    .premios__item {
+      width: 95%;
+      margin: auto;
+      p {
+        margin-top: 0px;
+      }
+    }
+  }
+  // * ===============================================
+  // * BUSCAR BOLETO
+  // * ===============================================
+  .boleto {
+    margin: auto;
+    margin-top: 20px;
+    .boleto__botones {
+      //
+
+      ::placeholder {
+        color: $blackL;
+      }
+    }
+  }
+}
