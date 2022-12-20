@@ -10,13 +10,30 @@ class ModeloUsuarios{
 
   static public function mdlMostrarUsuarios($tabla, $item, $valor){
 
-    $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla where $item = :$item");
+    if($item != null){
 
-    $stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+      $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla where $item = :$item");
 
-    $stmt -> execute();
+      $stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+  
+      $stmt -> execute();
+  
+      return $stmt -> fetch();      
 
-    return $stmt -> fetch();
+    }else{
+
+      $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");      
+  
+      $stmt -> execute();
+  
+      return $stmt -> fetchAll();  
+
+    }
+
+    $stmt -> close();
+    $stmt = null;
+
+    
 
   }
   

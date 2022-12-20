@@ -38,6 +38,7 @@
         <div class="card-body">
 
         <table id="example2" class="table table-bordered table-hover">
+
             <thead>
             <tr>
               <th>#</th>
@@ -50,36 +51,37 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-              <td>
-                1
-              </td>
-              <td>
-                Admin
-              </td>
-              <td>
-                Alejandro
-              </td>
-              <td>
-                Admin
-              </td>
-              <td> 
-                <button type="button" class="btn btn-block btn-success btn-xs">Activo</button>
-              </td>
-              <td>
-                2022-12-19 18:29:00
-              </td>
-              <td>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-warning">
-                    <i class="fas fa-pencil"></i>
-                  </button>
-                  <button type="button" class="btn btn-danger">
-                    <i class="fas fa-trash"></i>
-                  </button>                  
-                </div>
-              </td>
-            </tr>                       
+              <?php
+                $item = null;
+                $valor = null;
+                $usuarios = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
+
+                foreach ($usuarios as $key => $value) {
+                  
+                  echo '
+                    <tr>
+                      <td>'.$value["id"].'</td>
+                      <td>'.$value["usuario"].'</td>
+                      <td>'.$value["nombre"].'</td>
+                      <td>'.$value["perfil"].'</td>
+                      <td><button type="button" class="btn btn-block btn-success btn-xs">Activo</button></td>
+                      <td>'.$value["ultimo_login"].'</td>
+                      <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editarUsuario">
+                            <i class="fas fa-pencil"></i>
+                          </button>
+                          <button type="button" class="btn btn-danger">
+                            <i class="fas fa-trash"></i>
+                          </button>                  
+                        </div>
+                      </td>
+                    </tr>     
+                  ';
+
+                }
+              ?>
+                              
             </tbody>          
           </table>
           
@@ -109,6 +111,72 @@
   });
 </script>
 
+<!--===============================================
+MODAL EDITAR USUARIO
+=================================================-->
+<div class="modal fade" id="editarUsuario">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+      <form role="form" method="post" enctype="multipart/form-data">
+
+        <div class="modal-header">
+          <h4 class="modal-title">Editar Usuario</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          
+            <div class="card-body">
+              <!--===============================================
+              Usuario
+              =================================================-->
+              <div class="form-group">
+                <label>Usuario</label>
+                <div class="form-group">                  
+                  <input type="text" class="form-control" id="editarUsuario" name="editarUsuario">
+                </div>               
+              </div>
+
+              <!--===============================================
+              Nombre
+              =================================================-->
+              <div class="form-group">
+                <label>Nombre</label>
+                <div class="form-group">                  
+                  <input type="text" class="form-control" id="editarNombre" name="editarNombre">
+                </div>                
+              </div>
+
+              <!--===============================================
+              Nombre
+              =================================================-->
+              <div class="form-group">
+                <label>Password</label>
+                <div class="form-group">                  
+                  <input type="text" class="form-control" id="editarPassword" name="editarPassword" placeholder="Escriba nuevo password si requiere cambiarlo">
+                </div>                
+              </div>            
+              
+            </div>          
+          
+        </div>
+
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+
+      </form>
+    </div>  
+
+  </div>
+  
+</div>
 
   
 
