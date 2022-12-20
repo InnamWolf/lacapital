@@ -33,30 +33,81 @@
     <section class="content">
 
       <!-- Default box -->
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Title</h3>
-        </div>
-        <div class="card-body">
-          Start creating your amazing application!
-        </div>
-        <!-- /.card-body -->
-        <div class="card-footer">
-          Footer
-        </div>
-        <!-- /.card-footer-->
-      </div>
-      <!-- /.card -->
+      <div class="card">       
 
+        <div class="card-body">
+
+        <table id="example2" class="table table-bordered table-hover">
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>Usuario</th>
+              <th>Nombre</th>
+              <th>Perfil</th>
+              <th>Estado</th>
+              <th>Ultimo login</th>
+              <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                1
+              </td>
+              <td>
+                Admin
+              </td>
+              <td>
+                Alejandro
+              </td>
+              <td>
+                Admin
+              </td>
+              <td> 
+                <button type="button" class="btn btn-block btn-success btn-xs">Activo</button>
+              </td>
+              <td>
+                2022-12-19 18:29:00
+              </td>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-warning">
+                    <i class="fas fa-pencil"></i>
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    <i class="fas fa-trash"></i>
+                  </button>                  
+                </div>
+              </td>
+            </tr>                       
+            </tbody>          
+          </table>
+          
+        </div>
+        
+      </div>
+      
     </section>
-    <!-- /.content -->
+    
   </div>
-  <!-- /.content-wrapper -->
+  
 
   <?php
     include ('view/components/cpanelFooter.php');
   ?>
-
+<script>
+  $(function () {    
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
 
 
   
