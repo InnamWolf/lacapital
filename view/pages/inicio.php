@@ -12,7 +12,7 @@
   =================================================-->  
   <div class="imgTop" id="inicio">
     <div class="btnComprar">
-      <a href="#">Comprar Boletos</a>
+      <a href="comprar">Comprar Boletos</a>
     </div>
   </div>
 

@@ -1,0 +1,15 @@
+.botones__item {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  background: $gray;
+  width: 400px;
+  color: $white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 18px;
+  top: 30px;
+  border: solid $white 4px;
+}

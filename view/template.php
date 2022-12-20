@@ -44,7 +44,8 @@
          $_GET["url"] == "cpanel" ||
          $_GET["url"] == "salir"  ||
          $_GET["url"] == "escritorio" ||
-         $_GET["url"] == "usuario"
+         $_GET["url"] == "usuario" ||
+         $_GET["url"] == "comprar" 
       ){
         if($_GET["url"] == "cpanel" ||
           $_GET["url"] == "salir" ||
