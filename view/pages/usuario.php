@@ -68,7 +68,7 @@
                       <td>'.$value["ultimo_login"].'</td>
                       <td>
                         <div class="btn-group">
-                          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editarUsuario">
+                          <button type="button" class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#editarUsuarios">
                             <i class="fas fa-pencil"></i>
                           </button>
                           <button type="button" class="btn btn-danger">
@@ -97,7 +97,11 @@
   <?php
     include ('view/components/cpanelFooter.php');
   ?>
+
+<script src="view/src/js/usuarios.js"></script> 
+
 <script>
+  
   $(function () {    
     $('#example2').DataTable({
       "paging": true,
@@ -114,7 +118,7 @@
 <!--===============================================
 MODAL EDITAR USUARIO
 =================================================-->
-<div class="modal fade" id="editarUsuario">
+<div class="modal fade" id="editarUsuarios">
 
   <div class="modal-dialog">
 
@@ -139,6 +143,7 @@ MODAL EDITAR USUARIO
                 <label>Usuario</label>
                 <div class="form-group">                  
                   <input type="text" class="form-control" id="editarUsuario" name="editarUsuario">
+                  <input type="hidden" name="usuarioActual" id="usuarioActual">
                 </div>               
               </div>
 
@@ -149,6 +154,7 @@ MODAL EDITAR USUARIO
                 <label>Nombre</label>
                 <div class="form-group">                  
                   <input type="text" class="form-control" id="editarNombre" name="editarNombre">
+                  <input type="hidden" name="nombreActual" id="nombreActual">
                 </div>                
               </div>
 
@@ -159,6 +165,8 @@ MODAL EDITAR USUARIO
                 <label>Password</label>
                 <div class="form-group">                  
                   <input type="text" class="form-control" id="editarPassword" name="editarPassword" placeholder="Escriba nuevo password si requiere cambiarlo">
+                  <input type="hidden" name="passActual" id="passActual">
+                  <input type="hidden" name="idUsuarioEditar" id="idUsuarioEditar">
                 </div>                
               </div>            
               
@@ -170,6 +178,13 @@ MODAL EDITAR USUARIO
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
           <button type="submit" class="btn btn-primary">Guardar</button>
         </div>
+
+        <?php
+
+          $editarUsuario = new ControladorUsuarios();
+          $editarUsuario -> ctrEditarUsuario(); 
+
+        ?>
 
       </form>
     </div>  

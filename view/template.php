@@ -5,7 +5,7 @@
 
   <?php    
     
-    if(isset($_GET["url"])){ 
+    if(isset($_GET["url"])){       
 
       if($_GET["url"] == "inicio" ||
          $_GET["url"] == "aviso" ||
@@ -13,8 +13,8 @@
          $_GET["url"] == "cpanel" ||
          $_GET["url"] == "salir"  ||
          $_GET["url"] == "escritorio" ||
-         $_GET["url"] == "usuario"
-      ){
+         $_GET["url"] == "usuario"         
+      ){        
         if($_GET["url"] == "cpanel" ||
           $_GET["url"] == "salir" ||
           $_GET["url"] == "escritorio" ||

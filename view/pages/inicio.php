@@ -94,3 +94,5 @@
 
 </section>
 
+<script src="view/src/js/usuarios.js"></script> 
+
