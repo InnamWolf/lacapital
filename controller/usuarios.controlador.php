@@ -114,7 +114,9 @@ class ControladorUsuarios{
                         }
                     })								
 
-						  	</script>';            
+						  	</script>';    
+                
+                return;
 
 					}
 

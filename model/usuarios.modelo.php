@@ -41,8 +41,6 @@ class ModeloUsuarios{
   static public function mdlEditarUsuario($tabla, $datos){
     
 		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre = :nombre, password = :password, usuario = :usuario WHERE id = :id");
-    echo '<pre>'; print_r($stmt); echo'</pre>';
-     exit();
 
   	$stmt -> bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 		$stmt -> bindParam(":password", $datos["password"], PDO::PARAM_STR);
