@@ -23,6 +23,13 @@ NAV-MOVIL
             <a class="link navMovInterno__link" href="comprar" ><h2>Comprar Boletos</h2></a>
             <a class="link navMovInterno__link" href="cuentas" ><h2>Cuentas</h2></a>';
         }
+      }else {
+        echo '<a class="link navMovInterno__link" href="inicio"><img src="view/src/img/logo.svg" alt="logo"></a>
+          <a class="link navMovInterno__link" href="#faq"><h2>Preguntas Frecuentes</h2></a>
+          <a class="link navMovInterno__link" href="#nosotros"><h2>Nosotros</h2></a>
+          <a class="link navMovInterno__link" href="#contacto"><h2>Contacto</h2></a>
+          <a class="link navMovInterno__link" href="comprar" ><h2>Comprar Boletos</h2></a>
+          <a class="link navMovInterno__link" href="cuentas" ><h2>Cuentas</h2></a>';
       }
     ?>      
   </div>  
@@ -36,7 +43,7 @@ NAV DESKTOP
     <div class="navCentro__logo"><a class="link navMovInterno__link" href="inicio"><img src="view/src/img/logo.svg" alt="logo"></a></div>
     <div class="navCentro__items">        
       <?php         
-      
+        if(isset($_GET["url"])){ 
           if($_GET["url"] == "comprar" || $_GET["url"] == "cuentas"){
             echo '<a class="link navMovInterno__link" href="inicio"><h2>Preguntas Frecuentes</h2></a>
               <a class="link navMovInterno__link" href="inicio"><h2>Nosotros</h2></a>
@@ -50,7 +57,13 @@ NAV DESKTOP
               <a class="link navMovInterno__link" href="comprar" ><h2>Comprar Boletos</h2></a>
               <a class="link navMovInterno__link" href="cuentas" ><h2>Cuentas</h2></a>';
           }
-        
+        }else {
+          echo '<a class="link navMovInterno__link" href="#faq"><h2>Preguntas Frecuentes</h2></a>
+            <a class="link navMovInterno__link" href="#nosotros"><h2>Nosotros</h2></a>
+            <a class="link navMovInterno__link" href="#contacto"><h2>Contacto</h2></a>
+            <a class="link navMovInterno__link" href="comprar" ><h2>Comprar Boletos</h2></a>
+            <a class="link navMovInterno__link" href="cuentas" ><h2>Cuentas</h2></a>';
+        }
       ?>     
     </div>
   </div>  
