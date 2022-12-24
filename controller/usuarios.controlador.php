@@ -13,6 +13,8 @@ class ControladorUsuarios{
       if(preg_match('/^[a-zA-Z0-9]+$/', $_POST["logUsuario"]) &&
       preg_match('/^[a-zA-Z0-9]+$/', $_POST["logPassword"]) ){
 
+          $encriptar = crypt($_POST["logPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
+
           $tabla = "usuarios"; //tabla
           $item = "usuario";  //columna
           $valor = $_POST["logUsuario"]; // Dato a enviar          
@@ -20,7 +22,7 @@ class ControladorUsuarios{
           $respuesta = ModeloUsuarios::mdlMostrarUsuarios($tabla, $item, $valor);
 
 
-            if(is_array($respuesta) && $respuesta["usuario"] == $_POST["logUsuario"] && $respuesta["password"] == $_POST["logPassword"]){
+            if(is_array($respuesta) && $respuesta["usuario"] == $_POST["logUsuario"] && $respuesta["password"] == $encriptar){
               
               $_SESSION["credencial"] = "ok";
               
