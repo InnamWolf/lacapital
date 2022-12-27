@@ -36,5 +36,27 @@ class ModeloBoletos{
 
   }
 
+  static public function mdlCancelarBoletos($tabla, $valor){
+
+    $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0 WHERE id = :valor"); 
+    
+    $stmt -> bindParam(":valor",$valor, PDO::PARAM_INT);
+
+    if($stmt -> execute()){
+
+			return "ok";
+		
+		}else{
+
+			return "error";	
+
+		}
+
+		$stmt -> close();
+
+		$stmt = null;
+
+  }
+
 
 }

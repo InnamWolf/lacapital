@@ -10,6 +10,7 @@ class AjaxBoletos{
     //* ===============================================
 
     public $idBoleto;
+    public $idBoletoCan;
 
     public function ajaxPagarBoleto(){
 
@@ -22,6 +23,21 @@ class AjaxBoletos{
 
     }
 
+    //* ===============================================
+    //* CANCELAR BOLETOS 2
+    //* ===============================================
+
+    public function ajaxCancelarBoleto(){
+
+      $tabla = "boletos";              
+      $valor = $this->idBoletoCan;
+
+      $respuesta = ModeloBoletos::mdlCancelarBoletos($tabla, $valor);         
+      
+      echo json_encode($respuesta);
+
+  }
+
 }
 
   //* ===============================================
@@ -33,5 +49,17 @@ class AjaxBoletos{
     $pagar = new AjaxBoletos();
     $pagar -> idBoleto = $_POST["idBoleto"];
     $pagar -> ajaxPagarBoleto();        
+
+  }
+
+  //* ===============================================
+  //* CANCELAR BOLETOS 1
+  //* ===============================================
+  
+  if(isset($_POST["idBoletoCan"])){    
+    
+    $pagar = new AjaxBoletos();
+    $pagar -> idBoletoCan = $_POST["idBoletoCan"];
+    $pagar -> ajaxCancelarBoleto();        
 
   }
