@@ -14,13 +14,17 @@
          $_GET["url"] == "salir"  ||
          $_GET["url"] == "escritorio" ||
          $_GET["url"] == "usuario" ||
-         $_GET["url"] == "comprar" 
+         $_GET["url"] == "comprar" ||
+         $_GET["url"] == "genRifa" ||
+         $_GET["url"] == "valBoleto"
       ){
         if($_GET["url"] == "cpanel" ||
           $_GET["url"] == "salir" ||
           $_GET["url"] == "escritorio" ||
-          $_GET["url"] == "usuario")            
-        {
+          $_GET["url"] == "usuario" ||
+          $_GET["url"] == "genRifa" ||
+          $_GET["url"] == "valBoleto"
+        ){
           include "pages/".$_GET["url"].".php";  
         }else{
           include_once 'view/components/bodyFront.php';

@@ -17,12 +17,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Usuario</h1>
+            <h1>Validar Boletos</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="escritorio">Inicio</a></li>
-              <li class="breadcrumb-item active">Usuario</li>
+              <li class="breadcrumb-item active">Validar Boletos</li>
             </ol>
           </div>
         </div>
@@ -41,39 +41,34 @@
 
             <thead>
             <tr>
-              <th>#</th>
-              <th>Usuario</th>
+              <th># Boleto</th>
               <th>Nombre</th>
-              <th>Perfil</th>
-              <th>Estado</th>              
-              <th>Acciones</th>
+              <th>Estado</th>
+              <th>Situacion pago</th>
+              <th>Confirmar pago</th>              
+              <th>Retirar boleto</th>
             </tr>
             </thead>              
             <tbody>
               <?php
-                $item = null;
-                $valor = null;
-                $usuarios = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
 
-                foreach ($usuarios as $key => $value) {
+                $boletos = ControladorBoletos::ctrMostrarBoletos();
+
+                foreach ($boletos as $key => $value) {
                   
                   echo '
                     <tr>
-                      <td>'.$value["id"].'</td>
-                      <td>'.$value["usuario"].'</td>
-                      <td>'.$value["nombre"].'</td>
-                      <td>'.$value["perfil"].'</td>
-                      <td><button type="button" class="btn btn-block btn-success btn-xs">Activo</button></td>                      
-                      <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#editarUsuarios">
-                            <i class="fas fa-pencil"></i>
-                          </button>
-                          <!--<button type="button" class="btn btn-danger">
-                            <i class="fas fa-trash"></i>
-                          </button> -->
-                        </div>
-                      </td>
+                      <td>'.$value["num_boleto"].'</td>
+                      <td>'.ucfirst($value["nombre"]).' '. ucfirst($value["apellido"]).'</td>
+                      <td>'.ucwords($value["localidad"]).'</td>
+                      <td>';
+                        if($value["estatus"] == 1){
+                          echo'
+                          <p class="text-warning">Pago Pendiente</p>';
+                        }                        
+                      echo'</td>
+                      <td><button type="button" class="btn btn-block btn-success btn-xs" idBoletoPagado="'.$value["id"].'">Pagado</button></td>
+                      <td><button type="button" class="btn btn-block btn-danger btn-xs idBoletoCancelado="'.$value["id"].'">Cacelar</button></td>                     
                     </tr>     
                   ';
 
