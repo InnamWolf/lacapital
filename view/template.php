@@ -16,14 +16,16 @@
          $_GET["url"] == "usuario" ||
          $_GET["url"] == "comprar" ||
          $_GET["url"] == "genRifa" ||
-         $_GET["url"] == "valBoleto"
+         $_GET["url"] == "valBoleto" ||
+         $_GET["url"] == "buscarBoleto"
       ){
         if($_GET["url"] == "cpanel" ||
           $_GET["url"] == "salir" ||
           $_GET["url"] == "escritorio" ||
           $_GET["url"] == "usuario" ||
           $_GET["url"] == "genRifa" ||
-          $_GET["url"] == "valBoleto"
+          $_GET["url"] == "valBoleto" ||
+          $_GET["url"] == "buscarBoleto"
         ){
           include "pages/".$_GET["url"].".php";  
         }else{

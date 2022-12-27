@@ -57,7 +57,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="buscarBoleto" class="nav-link">
                 <i class="far fa-dot-circle nav-icon "></i>
                 <p>Buscar boleto</p>
               </a>

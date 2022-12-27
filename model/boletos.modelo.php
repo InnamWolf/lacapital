@@ -58,5 +58,16 @@ class ModeloBoletos{
 
   }
 
+  static public function mdlBuscarBoletos($tabla, $boleto){
+
+    $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla where num_boleto = :boleto");
+    
+    $stmt -> bindParam(":boleto",$boleto, PDO::PARAM_STR);    
+
+    $stmt -> execute();
+
+    return $stmt -> fetch();     
+
+  }
 
 }
