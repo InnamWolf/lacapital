@@ -80,7 +80,7 @@
           <ul class="nav nav-treeview">
 
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="genSorteo" class="nav-link">
                 <i class="far fa-dot-circle nav-icon"></i>
                 <p>Generar Sorteo</p>
               </a>

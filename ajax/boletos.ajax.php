@@ -3,14 +3,14 @@
 require_once "../controller/boletos.controlador.php";
 require_once "../model/boletos.modelo.php";
 
-class AjaxBoletos{
-
-   //* ===============================================
-    //* VALIDAR BOLETOS 2
-    //* ===============================================
+class AjaxBoletos{   
 
     public $idBoleto;
     public $idBoletoCan;
+
+  //* ===============================================
+  //* VALIDAR BOLETOS 2
+  //* ===============================================
 
     public function ajaxPagarBoleto(){
 

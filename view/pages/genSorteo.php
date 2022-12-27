@@ -17,12 +17,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Usuario</h1>
+            <h1>Generar Sorteo</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="escritorio">Inicio</a></li>
-              <li class="breadcrumb-item active">Usuario</li>
+              <li class="breadcrumb-item active">Generar Sorteo</li>
             </ol>
           </div>
         </div>
@@ -37,52 +37,8 @@
 
         <div class="card-body">
 
-        <table id="example2" class="table table-bordered table-hover">
-
-            <thead>
-            <tr>
-              <th>#</th>
-              <th>Usuario</th>
-              <th>Nombre</th>
-              <th>Perfil</th>
-              <th>Estado</th>              
-              <th>Acciones</th>
-            </tr>
-            </thead>              
-            <tbody>
-              <?php
-                $item = null;
-                $valor = null;
-                $usuarios = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
-
-                foreach ($usuarios as $key => $value) {
-                  
-                  echo '
-                    <tr>
-                      <td>'.$value["id"].'</td>
-                      <td>'.$value["usuario"].'</td>
-                      <td>'.$value["nombre"].'</td>
-                      <td>'.$value["perfil"].'</td>
-                      <td><button type="button" class="btn btn-block btn-success btn-xs">Activo</button></td>                      
-                      <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#editarUsuarios">
-                            <i class="fas fa-pencil"></i>
-                          </button>
-                          <!--<button type="button" class="btn btn-danger">
-                            <i class="fas fa-trash"></i>
-                          </button> -->
-                        </div>
-                      </td>
-                    </tr>     
-                  ';
-
-                }
-              ?>
-                              
-            </tbody>          
-          </table>
-          
+          <button type="button" class="btn btn-primary btn-lg nuevoSorteo">Generar sorteo</button>
+        
         </div>
         
       </div>
@@ -96,100 +52,6 @@
     include ('view/components/cpanelFooter.php');
   ?>
 
-<script src="view/src/js/usuarios.js"></script> 
+<script src="view/src/js/sorteo.js"></script> 
 
-<script>
-  
-  $(function () {    
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-</script>
-
-<!--===============================================
-MODAL EDITAR USUARIO
-=================================================-->
-<div class="modal fade" id="editarUsuarios">
-
-  <div class="modal-dialog">
-
-    <div class="modal-content">
-
-      <form role="form" method="post" enctype="multipart/form-data">
-
-        <div class="modal-header">
-          <h4 class="modal-title">Editar Usuario</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body">
-          
-            <div class="card-body">
-              <!--===============================================
-              Usuario
-              =================================================-->
-              <div class="form-group">
-                <label>Usuario</label>
-                <div class="form-group">                  
-                  <input type="text" class="form-control" id="editarUsuario" name="editarUsuario">
-                  <input type="hidden" name="usuarioActual" id="usuarioActual">
-                </div>               
-              </div>
-
-              <!--===============================================
-              Nombre
-              =================================================-->
-              <div class="form-group">
-                <label>Nombre</label>
-                <div class="form-group">                  
-                  <input type="text" class="form-control" id="editarNombre" name="editarNombre">
-                  <input type="hidden" name="nombreActual" id="nombreActual">
-                </div>                
-              </div>
-
-              <!--===============================================
-              Nombre
-              =================================================-->
-              <div class="form-group">
-                <label>Password</label>
-                <div class="form-group">                  
-                  <input type="text" class="form-control" id="editarPassword" name="editarPassword" placeholder="Escriba nuevo password si requiere cambiarlo">
-                  <input type="hidden" name="passActual" id="passActual">
-                  <input type="hidden" name="idUsuarioEditar" id="idUsuarioEditar">
-                </div>                
-              </div>            
-              
-            </div>          
-          
-        </div>
-
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          <button type="submit" class="btn btn-primary">Guardar</button>
-        </div>
-
-        <?php
-
-          $editarUsuario = new ControladorUsuarios();
-          $editarUsuario -> ctrEditarUsuario(); 
-
-        ?>
-
-      </form>
-    </div>  
-
-  </div>
-  
-</div>
-
-  
 

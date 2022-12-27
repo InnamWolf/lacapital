@@ -17,7 +17,8 @@
          $_GET["url"] == "comprar" ||
          $_GET["url"] == "genRifa" ||
          $_GET["url"] == "valBoleto" ||
-         $_GET["url"] == "buscarBoleto"
+         $_GET["url"] == "buscarBoleto" ||
+         $_GET["url"] == "genSorteo"
       ){
         if($_GET["url"] == "cpanel" ||
           $_GET["url"] == "salir" ||
@@ -25,7 +26,8 @@
           $_GET["url"] == "usuario" ||
           $_GET["url"] == "genRifa" ||
           $_GET["url"] == "valBoleto" ||
-          $_GET["url"] == "buscarBoleto"
+          $_GET["url"] == "buscarBoleto"||
+          $_GET["url"] == "genSorteo"
         ){
           include "pages/".$_GET["url"].".php";  
         }else{
