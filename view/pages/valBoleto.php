@@ -67,8 +67,8 @@
                           <p class="text-warning">Pago Pendiente</p>';
                         }                        
                       echo'</td>
-                      <td><button type="button" class="btn btn-block btn-success btn-xs" idBoletoPagado="'.$value["id"].'">Pagado</button></td>
-                      <td><button type="button" class="btn btn-block btn-danger btn-xs idBoletoCancelado="'.$value["id"].'">Cacelar</button></td>                     
+                      <td><button type="button" class="btn btn-block btn-success btn-xs boletoPagado" idBoleto="'.$value["id"].'">Pagado</button></td>
+                      <td><button type="button" class="btn btn-block btn-danger btn-xs boletoCancelado" idBoletoCan="'.$value["id"].'">Cacelar</button></td>                     
                     </tr>     
                   ';
 
@@ -91,7 +91,7 @@
     include ('view/components/cpanelFooter.php');
   ?>
 
-<script src="view/src/js/usuarios.js"></script> 
+<script src="view/src/js/boletos.js"></script> 
 
 <script>
   
@@ -108,83 +108,7 @@
   });
 </script>
 
-<!--===============================================
-MODAL EDITAR USUARIO
-=================================================-->
-<div class="modal fade" id="editarUsuarios">
 
-  <div class="modal-dialog">
-
-    <div class="modal-content">
-
-      <form role="form" method="post" enctype="multipart/form-data">
-
-        <div class="modal-header">
-          <h4 class="modal-title">Editar Usuario</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body">
-          
-            <div class="card-body">
-              <!--===============================================
-              Usuario
-              =================================================-->
-              <div class="form-group">
-                <label>Usuario</label>
-                <div class="form-group">                  
-                  <input type="text" class="form-control" id="editarUsuario" name="editarUsuario">
-                  <input type="hidden" name="usuarioActual" id="usuarioActual">
-                </div>               
-              </div>
-
-              <!--===============================================
-              Nombre
-              =================================================-->
-              <div class="form-group">
-                <label>Nombre</label>
-                <div class="form-group">                  
-                  <input type="text" class="form-control" id="editarNombre" name="editarNombre">
-                  <input type="hidden" name="nombreActual" id="nombreActual">
-                </div>                
-              </div>
-
-              <!--===============================================
-              Nombre
-              =================================================-->
-              <div class="form-group">
-                <label>Password</label>
-                <div class="form-group">                  
-                  <input type="text" class="form-control" id="editarPassword" name="editarPassword" placeholder="Escriba nuevo password si requiere cambiarlo">
-                  <input type="hidden" name="passActual" id="passActual">
-                  <input type="hidden" name="idUsuarioEditar" id="idUsuarioEditar">
-                </div>                
-              </div>            
-              
-            </div>          
-          
-        </div>
-
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          <button type="submit" class="btn btn-primary">Guardar</button>
-        </div>
-
-        <?php
-
-          $editarUsuario = new ControladorUsuarios();
-          $editarUsuario -> ctrEditarUsuario(); 
-
-        ?>
-
-      </form>
-    </div>  
-
-  </div>
-  
-</div>
 
   
 

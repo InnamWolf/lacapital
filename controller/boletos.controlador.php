@@ -3,7 +3,7 @@
 class ControladorBoletos{
 
   //* ===============================================
-  //* MOSTRAR boletos
+  //* MOSTRAR BOLETOS
   //* ===============================================
 
   static public function ctrMostrarBoletos(){
@@ -14,5 +14,6 @@ class ControladorBoletos{
     return $respuesta;
 
   }
+
   
 }

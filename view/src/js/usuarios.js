@@ -1,14 +1,13 @@
 //* ===============================================
 //* EDITAR USUARIOS
 //* ===============================================
-// $(".btnEditarUsuario").click(function(){
   $(".table").on("click", ".btnEditarUsuario", function(){
   
    var idUsuario = $(this).attr("idUsuario");  
    var datos = new FormData();
-   datos.append("idUsuario", idUsuario);
+   datos.append("idUsuario", idUsuario);   
   
-  $.ajax({
+   $.ajax({
     url: "ajax/usuarios.ajax.php",
     method: "POST",
     data: datos,
@@ -26,6 +25,6 @@
 
     }
 
-   });    
+   }); 
    
 })
