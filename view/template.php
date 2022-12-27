@@ -36,6 +36,11 @@
           include "pages/".$_GET["url"].".php";
           include_once 'view/components/footer.php';
         }
+      }else{
+        include_once 'view/components/bodyFront.php';
+        include_once 'view/components/menu.php';
+        include "pages/404.php";
+        include_once 'view/components/footer.php';
       }
         
       }        

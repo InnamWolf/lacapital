@@ -1,0 +1,11 @@
+.error{
+  width: 90%;
+  margin: auto;
+  @include desktop{
+    width: 600px;
+  }
+  h1, h3{
+    color: #eeb61ed0;
+  }
+
+}
