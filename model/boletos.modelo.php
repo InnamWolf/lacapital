@@ -4,6 +4,10 @@ require_once "conexion.php";
 
 class ModeloBoletos{
 
+  //* ===============================================
+  //* MOSTRAR BOLETOS
+  //* ===============================================
+
   static public function mdlMostrarBoletos($tabla){
 
     $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla where estatus = 1");      
@@ -13,6 +17,10 @@ class ModeloBoletos{
       return $stmt -> fetchAll(); 
 
   }
+
+  //* ===============================================
+  //* PAGAR BOLETOS
+  //* ===============================================
 
   static public function mdlPagarBoletos($tabla, $valor){
 
@@ -36,6 +44,10 @@ class ModeloBoletos{
 
   }
 
+
+  //* ===============================================
+  //* CANCELAR BOLETOS
+  //* ===============================================
   static public function mdlCancelarBoletos($tabla, $valor){
 
     $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, nombre = null, apellido = null, telefono = null, localidad = null, folio = null  WHERE id = :valor"); 
@@ -58,7 +70,27 @@ class ModeloBoletos{
 
   }
 
+  //* ===============================================
+  //* BUSCAR BOLETOS
+  //* ===============================================
+
   static public function mdlBuscarBoletos($tabla, $boleto){
+
+    $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla where num_boleto = :boleto");
+    
+    $stmt -> bindParam(":boleto",$boleto, PDO::PARAM_STR);    
+
+    $stmt -> execute();
+
+    return $stmt -> fetch();     
+
+  }
+
+  //* ===============================================
+  //* BUSCAR BOLETOS ADMIN
+  //* ===============================================
+
+  static public function mdlBuscarBoletosAdmin($tabla, $boleto){
 
     $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla where num_boleto = :boleto");
     

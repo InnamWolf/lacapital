@@ -61,6 +61,13 @@
                 <i class="far fa-dot-circle nav-icon "></i>
                 <p>Buscar boleto</p>
               </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="buscarBoletoAdmin" class="nav-link">
+                <i class="far fa-dot-circle nav-icon "></i>
+                <p>Buscar boleto Admin</p>
+              </a>
             </li>  
 
           </ul>
