@@ -6,7 +6,7 @@
     <div class="principal__item">
       <p>GMC SIERRA DENALI 2022.5 
       <br>+ CORVETTE STRINGAY
-      <br>22 de Noviembre 2022</p>
+      <br>31 de Noviembre 2023</p>
     </div>
   </div>
 
@@ -23,7 +23,7 @@
   <div class="costo">
     <h2>COSTO BOLETOS</h2>
     <div class="costo__item">
-      <p>1 BOLETO POR $49</p>
+      <p>1 BOLETO POR $45</p>
       <p>2 BOLETOS POR $98</p>
       <p>3 BOLETOS POR $147</p>
       <p>4 BOLETOS POR $196</p>
@@ -53,11 +53,11 @@
       <br>+ $50,000 MXN
       <br>PAGANDO EN LAS PRIMERAS 24 HRS DEL SORTEO</p>
     </div>
-    <h3>MEGA BONO PRONTO PAGO:</h3>
+   <!--  <h3>MEGA BONO PRONTO PAGO:</h3>
     <div class="premios__item">
       <p>RAM TRX 2022 SUPER EQUIPADA 702 HP +
       <br>RZR POLARIS PRO R 2022</p>
-    </div>
+    </div> -->
   </div>
 
   <!--===============================================
