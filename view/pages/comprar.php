@@ -4,9 +4,9 @@
   =================================================-->
   <div class="principal">
     <div class="principal__item">
-      <p>GMC SIERRA DENALI 2022.5 
-      <br>+ CORVETTE STRINGAY
-      <br>31 de Noviembre 2023</p>
+      <p>🍀Jeep Sahara 2023🍀
+      <br>+ un bono de 100 mil pesos 
+      <br>31 de Enero 2023</p>
     </div>
   </div>
 
@@ -24,16 +24,16 @@
     <h2>COSTO BOLETOS</h2>
     <div class="costo__item">
       <p>1 BOLETO POR $45</p>
-      <p>2 BOLETOS POR $98</p>
-      <p>3 BOLETOS POR $147</p>
-      <p>4 BOLETOS POR $196</p>
-      <p>5 BOLETOS POR $245</p>
-      <p>10 BOLETOS POR $490</p>
-      <p>20 BOLETOS POR $980</p>
-      <p>30 BOLETOS POR $1,470</p>
-      <p>40 BOLETOS POR $1,960</p>
-      <p>50 BOLETOS POR $2,450</p>
-      <p>100 BOLETOS POR $4,900</p>
+      <p>2 BOLETOS POR $90</p>
+      <p>3 BOLETOS POR $135</p>
+      <p>4 BOLETOS POR $180</p>
+      <p>5 BOLETOS POR $225</p>
+      <p>10 BOLETOS POR $450</p>
+      <p>20 BOLETOS POR $900</p>
+      <p>30 BOLETOS POR $1,350</p>
+      <p>40 BOLETOS POR $1,800</p>
+      <p>50 BOLETOS POR $2,250</p>
+      <p>100 BOLETOS POR $4,500</p>
     </div>
   </div>
 
@@ -43,21 +43,21 @@
   <div class="premios">
     <h3>CON TU BOLETO LIQUIDADO PARTICIPAS POR:</h3>
     <div class="premios__item">
-      <p>GMC SIERRA DENALI 2022.5
-      <br>+ CORVETTE STRINGAY 495 HP
-      <br>22 NOVIEMBRE</p>
+      <p>🍀Jeep Sahara 2023🍀
+      <br>+ un bono de 100 mil pesos
+      <br>31 de Enero 2023
+      <br>(Pagando dentro de las primeras 12 hrs y no dejando boletos despreciados)</p>
     </div>
     <h3>BONO DE PRESENTACIÓN:</h3>
     <div class="premios__item">
-      <p>IPHONE 14 PRO MAX
-      <br>+ $50,000 MXN
-      <br>PAGANDO EN LAS PRIMERAS 24 HRS DEL SORTEO</p>
+      <p>+ $50,000 MXN
+      <!-- <br>PAGANDO EN LAS PRIMERAS 24 HRS DEL SORTEO -->
+      </p>
     </div>
-   <!--  <h3>MEGA BONO PRONTO PAGO:</h3>
+    <h3>SEGUNDO LUGAR:</h3>
     <div class="premios__item">
-      <p>RAM TRX 2022 SUPER EQUIPADA 702 HP +
-      <br>RZR POLARIS PRO R 2022</p>
-    </div> -->
+      <p>$50,000 MXN</p>
+    </div>
   </div>
 
   <!--===============================================
