@@ -40,7 +40,7 @@
       <div class="redes">
         <p class="colorVerde">ENVÍANOS TUS PREGUNTAS A</p>
         <div class="redes__iconos">
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://api.whatsapp.com/send/?phone=5215635383745&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a>
           <a href="https://www.facebook.com/profile.php?id=100088281957179&mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a>
         </div>
       </div>
@@ -67,9 +67,9 @@
   <div class="contacto" id="contacto">
     <h2 class="titleTitulo">CONTACTO</h2>
     <div class="inContacto">
-      <p>WHATSAPP: (XX) XXXX XXXX</p>
+      <p>WHATSAPP: (52) 1-56-3538-3745 <br> (52) 56-3538-3770</p>
       <div class="contacto__iconos">
-        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=5215635383745&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="https://www.facebook.com/profile.php?id=100088281957179&mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a>
       </div>
       <!-- <div class="imgInfo"></div> -->
@@ -81,7 +81,7 @@
   =================================================-->
   <div class="whatsapp">
     <h2 class="titleTitulo">PREGUNTAS AL WHATSAPP
-      <br> (XX) XXXX XXXX
+      <br> (52) 1-56-3538-3745 <br> (52) 56-3538-3770
     </h2>
   </div>
 

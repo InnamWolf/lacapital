@@ -36,15 +36,20 @@
     .imagen__item {
       margin: auto;
       background-image: url('../img/premio.jpg');
-      background-position: center;
+      background-position: 0px -123px;
       background-size: cover;
       background-repeat: no-repeat;
-      height: 150px;
+      height: 253px;
       width: 350px;
       border: solid 3px $redB;
+      @include tablet{
+        background-position: 0px -175px;
+        width: 500px;
+      }
       @include desktop {
         height: 450px;
         width: 850px;
+        background-position: 0px -300px;
       }
     }
   }

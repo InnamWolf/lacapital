@@ -15,23 +15,23 @@
   // * IMAGEN PRINCIPAL
   // * ===============================================
   .imgTop {
-    background-image: url('../img/premio.jpg');
-    background-position: center;
+    background-image: url('../img/premio.jpg');    
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 300px;
     padding-top: 30px;
+    background-position: -74px -150px;
     @include tablet {
       height: 400px;
-      background-position-y: 40%;
+      background-position: 0px -263px;
     }
     @include desktop {
       height: 600px;
       margin: auto;
       padding-top: 50px;
       background-size: cover;
-      background-position: 0px -60px;
+      background-position: 0px -376px;
     }
   }
   .btnComprar {
