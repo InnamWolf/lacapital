@@ -4,8 +4,8 @@
   =================================================-->
   <div class="principal">
     <div class="principal__item">
-      <p> 🍀JEEP SAHARA 2023🍀
-      <br>+ UN BONO DE 100 MIL PESOS 
+       <span>🍀JEEP SAHARA 2023🍀</span>
+       <p>+ UN BONO DE 100 MIL PESOS 
       <br>31 DE ENERO 2023</p>
     </div>
   </div>
