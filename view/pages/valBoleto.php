@@ -44,6 +44,7 @@
               <th># Boleto</th>
               <th>Nombre</th>
               <th>Estado</th>
+              <th>Fecha comprado</th>
               <th>Situacion pago</th>
               <th>Confirmar pago</th>              
               <th>Retirar boleto</th>
@@ -61,6 +62,7 @@
                       <td>'.$value["num_boleto"].'</td>
                       <td>'.ucfirst($value["nombre"]).' '. ucfirst($value["apellido"]).'</td>
                       <td>'.ucwords($value["localidad"]).'</td>
+                      <td>'.ucwords($value["comprado"]).'</td>
                       <td>';
                         if($value["estatus"] == 1){
                           echo'
