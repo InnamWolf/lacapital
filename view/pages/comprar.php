@@ -43,10 +43,10 @@
   <div class="premios">
     <h3>CON TU BOLETO LIQUIDADO PARTICIPAS POR:</h3>
     <div class="premiositem">
-      <p>🍀JEEP SAHARA 2023🍀
-      <br>+ UN BONO DE 100 MIL PESOS
-      <br>31 DE ENERO 2023
-      <br>(PAGANDO DENTRO DE LAS PRIMERAS 12 HRS Y NO DEJANDO BOLETOS DESPRECIADOS)</p>
+      <p>🍀Jeep Sahara 2023🍀
+      <br>+ un bono de 100 mil pesos
+      <br>31 de Enero 2023
+      <br>(Pagando dentro de las primeras 12 hrs y no dejando boletos despreciados)</p>
     </div>
     <h3>BONO DE PRESENTACIÓN:</h3>
     <div class="premiositem">
@@ -59,28 +59,35 @@
       <p>$50,000 MXN</p>
     </div>
   </div>
-
+  
   <!--===============================================
   BUSCAR BOLETO
   =================================================-->
   <div class="boleto">
-    <h2 class="titulo">CONSEGUIR BOLETO</h2>
+    <h2 class="titulo">BUSCAR BOLETO</h2>
     <div class="boleto__botones">
-      <!-- <input type="text" id="folio" name="folio" class="botones__item" placeholder="FOLIO BOLETO"> -->
+      <input type="text" id="folioBuscar" name="folioBuscar" class="botones__item" placeholder="Escribe tu # de boleto" maxlength="5" pattern="[0-9]{5}">
+      <button class="mx-auto" id="btnBuscarBoleto">Buscar boleto</button>    
+    </div>
+  </div>  
+
+  <!--===============================================
+  AGREGAR BOLETO
+  =================================================-->
+  <div class="boleto">
+    <h2 class="titulo">AGREGAR BOLETO</h2>
+    <div class="boleto__botones">
+      <input type="text" id="folio" name="folio" class="botones__item" placeholder="Escribe tu # de boleto" maxlength="5" pattern="[0-9]{5}">
+      <button class="mx-auto" id="btnAgregarBoleto">Agregar boleto</button>
 
       <div class="apartar__boletos">
         <div class="mostrar__boletos__seleccionado" id="pintarBoleto">
-          <?php
-            $seleccionarBoletoFront = ControladorBoletosFront::ctrBoletoFrontSeleccionado();
-            foreach($seleccionarBoletoFront as $key => $value){
-              echo '<div class="encerrar__boletos selectBoleto" idBoleto="'.$value["id"].'" name="idBoletos">'.$value["num_boleto"].'</div>';              
-            };
-          ?>
+          
         </div>
         <a href="#" class="botones__item btn__verde apartar" data-bs-toggle="modal" data-bs-target="#apartarBoleto">APARTAR</a>
       </div>
 
-      <a href="#" class="botones__item btn__verde" data-bs-toggle="modal" data-bs-target="#generarBoleto">MÁQUINA DE LA SUERTE</a>
+      <a href="#" class="botones__item btn__verde" data-bs-toggle="modal" data-bs-target="#generarBoleto">MA�QUINA DE LA SUERTE</a>
       
       <div class="mostrar__boletos" id="quitarBoleto">
             Cargando boletos disponibles ...
@@ -145,13 +152,15 @@ MODAL APARTAR BOLETO
           <form role="form" method="post" enctype="multipart/form-data">
 
           <div class="form-group">
+          <div class="mostrar__boletos__seleccionado generar__seleccionado" id="boletosApartados">
             <?php
-              $seleccionarBoletoFront = ControladorBoletosFront::ctrBoletoFrontSeleccionado();
-              foreach($seleccionarBoletoFront as $key => $value){
-                echo '<div class=" form-control encerrar__boletos selectBoleto" idBoleto='.$value["id"].'>'.$value["num_boleto"].'</div>';
+              /*$aplicarBoletoFront = ControladorBoletosFront::ctrBoletoFrontSeleccionado();
+              foreach($aplicarBoletoFront as $key => $value){
+                echo '<div class="encerrar__boletos selectBoleto" idBoleto='.$value["id"].'>'.$value["num_boleto"].'</div>';
                 echo '<input type="hidden" name="apartarIdBoleto" value='.$value["id"].'>';
-              };
+              };*/
             ?>
+            </div>
           </div>
           
             <!--===============================================
@@ -249,9 +258,12 @@ MODAL APARTAR BOLETO
               <p class="folio">Folio: '.$value["folio"].'</p>
               <p class="datos__ticket">Nombre: '.$value["nombre"].'</p>
               <p class="datos__ticket">Estado: '.$value["localidad"].'</p>
-              <p class="datos__ticket">Boletos: '.$value["num_boleto"].'</p>
-              <p class="estatus__ticket" id="estatusTicket">'.$value["estatus"].'</p>
-              ';
+              <p class="datos__ticket">Boletos: '.$value["num_boleto"].'</p>';
+              if($value["estatus"] == 1){
+                echo'<p class="estatus__ticket rojo" id="estatusTicket">'.$value["estatus"].'</p>';
+              }else {
+                echo '<p class="estatus__ticket verde" id="estatusTicket">'.$value["estatus"].'</p>';
+              }
 
             }
           ?>
@@ -263,4 +275,5 @@ MODAL APARTAR BOLETO
   </div>
 </div>
 </section>
+<div id="debug">Aqui debugeo</div>
 <script src="view/src/js/boletosFront.js"></script>

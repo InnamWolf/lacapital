@@ -44,7 +44,109 @@ class ControladorBoletos{
                 <tr>
                   <td>'.$respuesta["num_boleto"].'</td>
                   <td>'.ucfirst($respuesta["nombre"]).' '.ucfirst($respuesta["apellido"]).'</td>                 
-                  <td>'.ucfirst($respuesta["localidad"]).'</td>
+                  <td>';
+                            switch ($respuesta["localidad"]) {
+                              case 1:
+                                echo ucwords("aguascalientes");
+                                break;
+                              case 2:
+                                echo ucwords("baja california");                                
+                                break;
+                              case 3:
+                                echo ucwords("baja california sur");                                
+                                break; 
+                              case 4:
+                                echo ucwords("campeche");                                
+                                break; 
+                              case 5:
+                                echo ucwords("chiapas");                                
+                                break; 
+                              case 6:
+                                echo ucwords("chihuahua");                                
+                                break; 
+                              case 7:
+                                echo ucwords("coahuila");                                
+                                break; 
+                              case 8:
+                                echo ucwords("colima");                                
+                                break; 
+                              case 9:
+                                echo ucwords("ciudad de méxico");                                
+                                break; 
+                              case 10:
+                                echo ucwords("durango");                                
+                                break; 
+                              case 11:
+                                echo ucwords("guanajuato");                                
+                                break; 
+                              case 12:
+                                echo ucwords("guerrero");                                
+                                break; 
+                              case 13:
+                                echo ucwords("hidalgo");                                
+                                break; 
+                              case 14:
+                                echo ucwords("jalisco");                                
+                                break; 
+                              case 15:
+                                echo ucwords("méxico");                                
+                                break; 
+                              case 16:
+                                echo ucwords("michoacán");                                
+                                break; 
+                              case 17:
+                                echo ucwords("morelos");                                
+                                break; 
+                              case 18:
+                                echo ucwords("nayarit");                                
+                                break; 
+                              case 19:
+                                echo ucwords("nuevo leon");                                
+                                break; 
+                              case 20:
+                                echo ucwords("oaxaca");                                
+                                break; 
+                              case 21:
+                                echo ucwords("puebla");                                
+                                break; 
+                              case 22:
+                                echo ucwords("querétaro");                                
+                                break; 
+                              case 23:
+                                echo ucwords("quintana roo");                                
+                                break; 
+                              case 24:
+                                echo ucwords("san luis potosí");                                
+                                break; 
+                              case 25:
+                                echo ucwords("sinaloa");                                
+                                break; 
+                              case 26:
+                                echo ucwords("sonora");                                
+                                break; 
+                              case 27:
+                                echo ucwords("tabasco");                                
+                                break; 
+                              case 28:
+                                echo ucwords("tamaulipas");                                
+                                break; 
+                              case 29:
+                                echo ucwords("tlaxcala");                                
+                                break; 
+                              case 30:
+                                echo ucwords("veracruz");                                
+                                break; 
+                              case 31:
+                                echo ucwords("yucatan");                                
+                                break; 
+                              case 32:
+                                echo ucwords("zacatecas");                                
+                                break; 
+                              case 33:
+                                echo ucwords("extranjero");                                
+                                break;                             
+                            }
+                      echo'</td>
                   <td>';
                         if($respuesta["estatus"] == 0){
                           echo'
@@ -148,7 +250,109 @@ class ControladorBoletos{
                   <td>'.$respuesta["num_boleto"].'</td>
                   <td>'.ucfirst($respuesta["nombre"]).' '.ucfirst($respuesta["apellido"]).'</td>
                   <td>'.$respuesta["telefono"].'</td>
-                  <td>'.ucfirst($respuesta["localidad"]).'</td>
+                  <td>';
+                  switch ($respuesta["localidad"]) {
+                    case 1:
+                      echo ucwords("aguascalientes");
+                      break;
+                    case 2:
+                      echo ucwords("baja california");                                
+                      break;
+                    case 3:
+                      echo ucwords("baja california sur");                                
+                      break; 
+                    case 4:
+                      echo ucwords("campeche");                                
+                      break; 
+                    case 5:
+                      echo ucwords("chiapas");                                
+                      break; 
+                    case 6:
+                      echo ucwords("chihuahua");                                
+                      break; 
+                    case 7:
+                      echo ucwords("coahuila");                                
+                      break; 
+                    case 8:
+                      echo ucwords("colima");                                
+                      break; 
+                    case 9:
+                      echo ucwords("ciudad de méxico");                                
+                      break; 
+                    case 10:
+                      echo ucwords("durango");                                
+                      break; 
+                    case 11:
+                      echo ucwords("guanajuato");                                
+                      break; 
+                    case 12:
+                      echo ucwords("guerrero");                                
+                      break; 
+                    case 13:
+                      echo ucwords("hidalgo");                                
+                      break; 
+                    case 14:
+                      echo ucwords("jalisco");                                
+                      break; 
+                    case 15:
+                      echo ucwords("méxico");                                
+                      break; 
+                    case 16:
+                      echo ucwords("michoacán");                                
+                      break; 
+                    case 17:
+                      echo ucwords("morelos");                                
+                      break; 
+                    case 18:
+                      echo ucwords("nayarit");                                
+                      break; 
+                    case 19:
+                      echo ucwords("nuevo leon");                                
+                      break; 
+                    case 20:
+                      echo ucwords("oaxaca");                                
+                      break; 
+                    case 21:
+                      echo ucwords("puebla");                                
+                      break; 
+                    case 22:
+                      echo ucwords("querétaro");                                
+                      break; 
+                    case 23:
+                      echo ucwords("quintana roo");                                
+                      break; 
+                    case 24:
+                      echo ucwords("san luis potosí");                                
+                      break; 
+                    case 25:
+                      echo ucwords("sinaloa");                                
+                      break; 
+                    case 26:
+                      echo ucwords("sonora");                                
+                      break; 
+                    case 27:
+                      echo ucwords("tabasco");                                
+                      break; 
+                    case 28:
+                      echo ucwords("tamaulipas");                                
+                      break; 
+                    case 29:
+                      echo ucwords("tlaxcala");                                
+                      break; 
+                    case 30:
+                      echo ucwords("veracruz");                                
+                      break; 
+                    case 31:
+                      echo ucwords("yucatan");                                
+                      break; 
+                    case 32:
+                      echo ucwords("zacatecas");                                
+                      break; 
+                    case 33:
+                      echo ucwords("extranjero");                                
+                      break;                             
+                  }
+            echo'</td>
                   <td>';
                         if($respuesta["estatus"] == 0){
                           echo'

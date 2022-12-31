@@ -22,13 +22,8 @@
       margin: auto;
       p {
         color: $white;
-        padding: 10px;
+        padding: 20px;
         margin: 0px;
-      }
-      span{
-        color: $white;
-        padding-top: 10px;
-        display: block;        
       }
     }
   }
@@ -128,7 +123,7 @@
 
   .form-control {
     margin-top: 20px;
-    width: 350px;
+    width: 300px;
   }
 
   .girar__maquina {
@@ -151,6 +146,9 @@
     border: 1px solid $blackL;
     margin: auto;
     margin-top: 20px;
+    height: 275px;
+    overflow: scroll;
+    width: 85%;
   }
 
   .apartar {
@@ -173,13 +171,14 @@
   .etiqueta {
     font-size: 14px;
     font-weight: bold;
-    .verde {
-      color: $green;
-    }
-    .rojo {
-      color: $redB;
-    }
   }
+}
+
+.verde {
+  color: $green;
+}
+.rojo {
+  color: $redB;
 }
 
 // * ===============================================
@@ -191,7 +190,6 @@
   display: block;
   margin: auto;
   margin-top: 20px;
-  // overflow: scroll;
   justify-content: space-around;
   padding: 20px;
   @include desktop {
@@ -200,11 +198,13 @@
 }
 .mostrar__boletos__seleccionado {
   background: $white;
-  width: 85%;
   display: flex;
   flex-wrap: wrap;
-  // overflow: scroll;
+  overflow: scroll;
   justify-content: space-around;
+  height: 200px;
+  cursor: pointer;
+  margin-top: 20px;
   @include desktop {
     width: 875px;
   }
@@ -213,14 +213,19 @@
 .encerrar__boletos {
   border: solid 2px $redB;
   width: 80px;
-  margin-bottom: 10px;
   text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .generar__seleccionado {
   justify-content: center;
   align-items: center;
+  margin: auto;
+  padding: 10px;
+  height: 150px;
+  margin-top: 20px;
   @include desktop {
-    width: 400px;
+    width: 450px;
   }
 }

@@ -7,4 +7,4 @@ $tabla = "boletos";
 $datos["cantidadBoleto"] = $_POST["cantidadBoleto"];
 $aleatorioBoletoFront = ModeloBoletosFront::mdlBoletoFrontAleatorio($tabla, $datos);
 
-echo 'ok';
+var_dump($aleatorioBoletoFront);

@@ -1,87 +1,81 @@
 // * ===============================================
 // * Nav Movil
 // * ===============================================
-.navMovil{
-
+.navMovil {
   background: $red;
 
-  @include desktop(){
+  @include desktop() {
     display: none;
-  }  
+  }
 
-  .navMostar{
+  .navMostar {
     padding: 10px;
     font-size: 30px;
   }
 
-  .navMovInterno__items{
+  .navMovInterno__items {
     display: none;
-    img{
+    img {
       height: 100px;
       display: block;
-      margin: auto;    
+      margin: auto;
     }
 
-    .navMovInterno__link{
+    .navMovInterno__link {
       text-align: center;
       color: $white;
-      &:nth-child(2)
-      ,&:nth-child(3)
-      ,&:nth-child(4)
-      ,&:nth-child(5){    
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
         border-bottom: 4px solid $redB;
       }
-      &:nth-child(6){
-        border-bottom:none;
+      &:nth-child(6) {
+        border-bottom: none;
       }
-      h2{      
+      h2 {
         margin: 0;
       }
       padding: 10px;
-    } 
-
+    }
   }
-
 }
 
 // * ===============================================
 // * Nav Desktop
 // * ===============================================
-.navDesktop{  
-
-  display: none;  
-  @include desktop(){ 
-    display: block;   
+.navDesktop {
+  display: none;
+  @include desktop() {
+    display: block;
   }
 
   background: $red;
 
-  .navCentro{    
+  .navCentro {
     width: 1400px;
     margin: auto;
     display: flex;
-    justify-content: space-between;  
-    align-items: center; 
-    position: relative;     
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 
-    .navCentro__logo{
-      img{
-        height: 180px;        
-        position: absolute; 
+    .navCentro__logo {
+      img {
+        height: 180px;
+        position: absolute;
         top: 10px;
-
       }
     }
 
-    .navCentro__items{      
+    .navCentro__items {
       display: flex;
       justify-content: space-around;
       width: 900px;
       padding: 20px;
-      a{
+      a {
         color: $white;
       }
     }
   }
-
 }
