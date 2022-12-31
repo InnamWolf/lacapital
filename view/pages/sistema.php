@@ -42,7 +42,7 @@
 
       if(isset($_GET["url"])){        
 
-        if( $_GET["url"] == "panel"            
+        if( $_GET["url"] == "sistema"            
         ){
           include "view/pages/login.php";
 

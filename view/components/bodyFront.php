@@ -28,7 +28,7 @@
 <script src="view/src/js/bootstrap.bundle.min.js"></script>
 <script src="view/src/js/bootstrap.bundle.min.js.map"></script>
 
-  <!-- <link rel="icon" href="view/src/img/icono.png" sizes="64x64"> -->
+<link rel="icon" href="view/src/img/logo.jpeg" sizes="64x64">
 
   <title>Sorteos la Capital</title>
 

@@ -6,7 +6,7 @@ class ModeloSorteos{
 
   static public function mdlNuevoSorteo($tabla){
 
-    $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, telefono = null,  nombre = null, apellido = null, localidad = null, folio =  null"); 
+    $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, telefono = null,  nombre = null, apellido = null, localidad = null, folio =  null, ip = null"); 
     
     if($stmt -> execute()){
 

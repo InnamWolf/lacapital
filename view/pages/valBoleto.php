@@ -42,6 +42,7 @@
             <thead>
             <tr>
               <th># Boleto</th>
+              <th>Folio</th>
               <th>Nombre</th>
               <th>Estado</th>
               <th>Fecha comprado</th>
@@ -60,6 +61,7 @@
                   echo '
                     <tr>
                       <td>'.$value["num_boleto"].'</td>
+                      <td>'.$value["folio"].'</td>
                       <td>'.ucfirst($value["nombre"]).' '. ucfirst($value["apellido"]).'</td>
                       <td>';
                             switch ($value["localidad"]) {

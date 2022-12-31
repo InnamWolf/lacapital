@@ -217,4 +217,137 @@ class ModeloBoletosFront{
 			
 	}
 
+	static public function mdlBuscaFolio($tabla, $datos){
+
+		$stmt = Conexion::conectar()->prepare("SELECT num_boleto, concat(nombre,' ',apellido) as nombre, localidad, case when estatus = 1 then 'Pago Pendiente' when estatus = 2 then 'Pagado' end estatus FROM boletos where folio = '".$datos["numFolio"]." ' and estatus <> 0");
+
+	
+		if(!($stmt -> execute())){
+			return var_dump($stmt -> errorInfo());	
+		}
+		
+		$boletoArray = $stmt -> fetchAll(); 
+		
+		$boletosTodos = "";
+		$totalBoletos = 0;
+        
+		foreach ($boletoArray as $key => $value) {
+			$boletosTodos .= $value["num_boleto"].', ';
+			$nombre = $value["nombre"];
+			$localidad = $value["localidad"];
+			$estatus = $value["estatus"];
+			$totalBoletos++;
+		}
+		
+		$totalPagar = $totalBoletos * 45;
+
+		switch ($localidad) {
+		  case 1:
+			$EstadoCompleto = ucwords("aguascalientes");
+			break;
+		  case 2:
+			$EstadoCompleto = ucwords("baja california");                                
+			break;
+		  case 3:
+			$EstadoCompleto = ucwords("baja california sur");                                
+			break; 
+		  case 4:
+			$EstadoCompleto = ucwords("campeche");                                
+			break; 
+		  case 5:
+			$EstadoCompleto = ucwords("chiapas");                                
+			break; 
+		  case 6:
+			$EstadoCompleto = ucwords("chihuahua");                                
+			break; 
+		  case 7:
+			$EstadoCompleto = ucwords("coahuila");                                
+			break; 
+		  case 8:
+			$EstadoCompleto = ucwords("colima");                                
+			break; 
+		  case 9:
+			$EstadoCompleto = ucwords("ciudad de méxico");                                
+			break; 
+		  case 10:
+			$EstadoCompleto = ucwords("durango");                                
+			break; 
+		  case 11:
+			$EstadoCompleto = ucwords("guanajuato");                                
+			break; 
+		  case 12:
+			$EstadoCompleto = ucwords("guerrero");                                
+			break; 
+		  case 13:
+			$EstadoCompleto = ucwords("hidalgo");                                
+			break; 
+		  case 14:
+			$EstadoCompleto = ucwords("jalisco");                                
+			break; 
+		  case 15:
+			$EstadoCompleto = ucwords("méxico");                                
+			break; 
+		  case 16:
+			$EstadoCompleto = ucwords("michoacán");                                
+			break; 
+		  case 17:
+			$EstadoCompleto = ucwords("morelos");                                
+			break; 
+		  case 18:
+			$EstadoCompleto = ucwords("nayarit");                                
+			break; 
+		  case 19:
+			$EstadoCompleto = ucwords("nuevo leon");                                
+			break; 
+		  case 20:
+			$EstadoCompleto = ucwords("oaxaca");                                
+			break; 
+		  case 21:
+			$EstadoCompleto = ucwords("puebla");                                
+			break; 
+		  case 22:
+			$EstadoCompleto = ucwords("querétaro");                                
+			break; 
+		  case 23:
+			$EstadoCompleto = ucwords("quintana roo");                                
+			break; 
+		  case 24:
+			$EstadoCompleto = ucwords("san luis potosí");                                
+			break; 
+		  case 25:
+			$EstadoCompleto = ucwords("sinaloa");                                
+			break; 
+		  case 26:
+			$EstadoCompleto = ucwords("sonora");                                
+			break; 
+		  case 27:
+			$EstadoCompleto = ucwords("tabasco");                                
+			break; 
+		  case 28:
+			$EstadoCompleto = ucwords("tamaulipas");                                
+			break; 
+		  case 29:
+			$EstadoCompleto = ucwords("tlaxcala");                                
+			break; 
+		  case 30:
+			$EstadoCompleto = ucwords("veracruz");                                
+			break; 
+		  case 31:
+			$EstadoCompleto = ucwords("yucatan");                                
+			break; 
+		  case 32:
+			$EstadoCompleto = ucwords("zacatecas");                                
+			break; 
+		  case 33:
+			$EstadoCompleto = ucwords("extranjero");                                
+			break;                             
+		}
+		
+$respuestaArray = array(["numFolio" => $datos['numFolio'], "nombre" => $nombre, "localidad" => $EstadoCompleto, "estatus" => $estatus, "monto" => number_format($totalPagar,2), "boleto" => $boletosTodos]);
+$myJSON = json_encode($respuestaArray);
+
+return $myJSON;
+		
+	}
+
 }

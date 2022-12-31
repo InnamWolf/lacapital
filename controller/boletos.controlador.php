@@ -35,6 +35,7 @@ class ControladorBoletos{
               <thead>
                 <tr>
                   <th style="width: 200px">Numero Boleto</th>
+                  <th style="width: 200px">Folio</th>
                   <th style="width: 200px">Nombre</th>                  
                   <th style="width: 200px">Estado</th>
                   <th style="width: 200px">Estatus</th>
@@ -43,6 +44,7 @@ class ControladorBoletos{
               <tbody>
                 <tr>
                   <td>'.$respuesta["num_boleto"].'</td>
+                  <td>'.$respuesta["folio"].'</td>
                   <td>'.ucfirst($respuesta["nombre"]).' '.ucfirst($respuesta["apellido"]).'</td>                 
                   <td>';
                             switch ($respuesta["localidad"]) {
@@ -239,6 +241,7 @@ class ControladorBoletos{
               <thead>
                 <tr>
                   <th style="width: 200px">Numero Boleto</th>
+                  <th style="width: 200px">Folio</th>
                   <th style="width: 200px">Nombre</th>
                   <th style="width: 200px">Teléfono</th>
                   <th style="width: 200px">Estado</th>
@@ -248,6 +251,7 @@ class ControladorBoletos{
               <tbody>
                 <tr>
                   <td>'.$respuesta["num_boleto"].'</td>
+                  <td>'.$respuesta["folio"].'</td>
                   <td>'.ucfirst($respuesta["nombre"]).' '.ucfirst($respuesta["apellido"]).'</td>
                   <td>'.$respuesta["telefono"].'</td>
                   <td>';

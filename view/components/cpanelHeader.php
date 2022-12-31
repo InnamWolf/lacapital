@@ -35,5 +35,7 @@
   <script src="view/src/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
   <!-- SWeetAlert -->
   <script src="view/src/plugins/sweetalert2/sweetalert2.min.js"></script>
+
+  <link rel="icon" href="view/src/img/logo.jpeg" sizes="64x64">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-footer-fixed">

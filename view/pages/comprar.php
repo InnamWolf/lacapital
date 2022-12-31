@@ -43,16 +43,14 @@
   <div class="premios">
     <h3>CON TU BOLETO LIQUIDADO PARTICIPAS POR:</h3>
     <div class="premiositem">
-      <p>🍀Jeep Sahara 2023🍀
-      <br>+ un bono de 100 mil pesos
+      <p>🍀JEEP SAHARA 2023🍀
+      <br>+ UN BONO DE 100 MIL PESOS
       <br>31 de Enero 2023
-      <br>(Pagando dentro de las primeras 12 hrs y no dejando boletos despreciados)</p>
+      <br>(PAGANDO DENTRO DE LAS PRIMERAS 12 HRS Y NO DEJANDO BOLETOS DESPRECIADOS)</p>
     </div>
     <h3>BONO DE PRESENTACIÓN:</h3>
     <div class="premiositem">
-      <p>+ $50,000 MXN
-      <!-- <br>PAGANDO EN LAS PRIMERAS 24 HRS DEL SORTEO -->
-      </p>
+      <p>+ $50,000 MXN</p>
     </div>
     <h3>SEGUNDO LUGAR:</h3>
     <div class="premios__item">
@@ -64,10 +62,10 @@
   BUSCAR BOLETO
   =================================================-->
   <div class="boleto">
-    <h2 class="titulo">BUSCAR BOLETO</h2>
+    <h2 class="titulo">BUSCAR FOLIO</h2>
     <div class="boleto__botones">
-      <input type="text" id="folioBuscar" name="folioBuscar" class="botones__item" placeholder="Escribe tu # de boleto" maxlength="5" pattern="[0-9]{5}">
-      <button class="mx-auto" id="btnBuscarBoleto">Buscar boleto</button>    
+      <input type="text" id="folioBuscar" name="folioBuscar" class="botones__item" placeholder="Escribe tu # de folio">
+      <button id="btnBuscarFolio" class="nuevoBoleto">Buscar folio</button>    
     </div>
   </div>  
 
@@ -78,7 +76,7 @@
     <h2 class="titulo">AGREGAR BOLETO</h2>
     <div class="boleto__botones">
       <input type="text" id="folio" name="folio" class="botones__item" placeholder="Escribe tu # de boleto" maxlength="5" pattern="[0-9]{5}">
-      <button class="mx-auto" id="btnAgregarBoleto">Agregar boleto</button>
+      <button class="nuevoBoleto" id="btnAgregarBoleto">Agregar boleto</button>
 
       <div class="apartar__boletos">
         <div class="mostrar__boletos__seleccionado" id="pintarBoleto">
@@ -87,7 +85,7 @@
         <a href="#" class="botones__item btn__verde apartar" data-bs-toggle="modal" data-bs-target="#apartarBoleto">APARTAR</a>
       </div>
 
-      <a href="#" class="botones__item btn__verde" data-bs-toggle="modal" data-bs-target="#generarBoleto">MA�QUINA DE LA SUERTE</a>
+      <a href="#" class="botones__item btn__verde" data-bs-toggle="modal" data-bs-target="#generarBoleto">MÁQUINA DE LA SUERTE</a>
       
       <div class="mostrar__boletos" id="quitarBoleto">
             Cargando boletos disponibles ...
@@ -275,5 +273,5 @@ MODAL APARTAR BOLETO
   </div>
 </div>
 </section>
-<div id="debug">Aqui debugeo</div>
+<!-- <div id="debug">Aqui debugeo</div> -->
 <script src="view/src/js/boletosFront.js"></script>

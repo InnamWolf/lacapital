@@ -10,7 +10,7 @@
       if($_GET["url"] == "inicio" ||
          $_GET["url"] == "aviso" ||
          $_GET["url"] == "cuentas" ||
-         $_GET["url"] == "cpanel" ||
+         $_GET["url"] == "sistema" ||
          $_GET["url"] == "salir"  ||
          $_GET["url"] == "escritorio" ||
          $_GET["url"] == "usuario" ||
@@ -21,7 +21,7 @@
          $_GET["url"] == "genSorteo" ||
          $_GET["url"] == "buscarBoletoAdmin" 
       ){
-        if($_GET["url"] == "cpanel" ||
+        if($_GET["url"] == "sistema" ||
           $_GET["url"] == "salir" ||
           $_GET["url"] == "escritorio" ||
           $_GET["url"] == "usuario" ||

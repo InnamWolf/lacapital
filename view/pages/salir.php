@@ -4,7 +4,7 @@
   
   echo'
     <script>
-      window.location = "cpanel";
+      window.location = "sistema";
     </script>  
   ';   
 ?>
