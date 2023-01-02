@@ -7,7 +7,7 @@
   // include_once 'view/components/menu.php';
   ?>
 
-  <img src="view/src/img/cuentas.jpg" alt="CUENTA">
+  <img src="view/src/img/cuenta.jpg" alt="CUENTA">
 
   <?php
   //* ===============================================
