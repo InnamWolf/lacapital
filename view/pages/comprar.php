@@ -43,14 +43,16 @@
   <div class="premios">
     <h3>CON TU BOLETO LIQUIDADO PARTICIPAS POR:</h3>
     <div class="premiositem">
-      <p>🍀JEEP SAHARA 2023🍀
-      <br>+ UN BONO DE 100 MIL PESOS
+      <p>🍀Jeep Sahara 2023🍀
+      <br>+ un bono de 100 mil pesos
       <br>31 de Enero 2023
-      <br>(PAGANDO DENTRO DE LAS PRIMERAS 12 HRS Y NO DEJANDO BOLETOS DESPRECIADOS)</p>
+      <br>(Pagando dentro de las primeras 12 hrs y no dejando boletos despreciados)</p>
     </div>
     <h3>BONO DE PRESENTACIÓN:</h3>
     <div class="premiositem">
-      <p>+ $50,000 MXN</p>
+      <p>+ $50,000 MXN
+      <!-- <br>PAGANDO EN LAS PRIMERAS 24 HRS DEL SORTEO -->
+      </p>
     </div>
     <h3>SEGUNDO LUGAR:</h3>
     <div class="premios__item">
@@ -133,7 +135,7 @@
 
           ?>
         </div>
-        <a href="#" class="botones__item btn__azul" data-bs-toggle="modal" data-bs-target="#situacionBoleto">COMPRAR BOLETO</a>
+        <a href="#" class="botones__item btn__azul" data-bs-toggle="modal" data-bs-target="#apartarBoleto">COMPRAR BOLETO</a>
       </div>
     </div>
   </div>
@@ -239,39 +241,39 @@ MODAL APARTAR BOLETO
   <!--===============================================
   SITUACION BOLETO
   =================================================-->
-  <div class="modal fade" id="situacionBoleto" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <h5 class="modal-title">SITUACIÓN BOLETO</h5>
-        <div class="mostrar_datos_boleto">
-          <?php
-            $item = null;
-            $valor = null;
-            $situacionBoletoFront = ControladorBoletosFront::ctrSituacionBoletoFront($item, $valor);
+  <!--<div class="modal fade" id="situacionBoleto" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5 class="modal-title">SITUACIÓN BOLETO</h5>
+          <div class="mostrar_datos_boleto">
+            php
+              $item = null;
+              $valor = null;
+              $situacionBoletoFront = ControladorBoletosFront::ctrSituacionBoletoFront($item, $valor);
 
-            foreach ($situacionBoletoFront as $key => $value) {
-              
-              echo '
-              <p class="folio">Folio: '.$value["folio"].'</p>
-              <p class="datos__ticket">Nombre: '.$value["nombre"].'</p>
-              <p class="datos__ticket">Estado: '.$value["localidad"].'</p>
-              <p class="datos__ticket">Boletos: '.$value["num_boleto"].'</p>';
-              if($value["estatus"] == 1){
-                echo'<p class="estatus__ticket rojo" id="estatusTicket">'.$value["estatus"].'</p>';
-              }else {
-                echo '<p class="estatus__ticket verde" id="estatusTicket">'.$value["estatus"].'</p>';
+              foreach ($situacionBoletoFront as $key => $value) {
+                
+                echo '
+                <p class="folio">Folio: '.$value["folio"].'</p>
+                <p class="datos__ticket">Nombre: '.$value["nombre"].'</p>
+                <p class="datos__ticket">Estado: '.$value["localidad"].'</p>
+                <p class="datos__ticket">Boletos: '.$value["num_boleto"].'</p>';
+                if($value["estatus"] == 1){
+                  echo'<p class="estatus__ticket rojo" id="estatusTicket">'.$value["estatus"].'</p>';
+                }else {
+                  echo '<p class="estatus__ticket verde" id="estatusTicket">'.$value["estatus"].'</p>';
+                }
+
               }
-
-            }
-          ?>
+            
+          </div>
+          <p class="etiqueta"><span class="verde">GUARDA TU NÚMERO DE FOLIO PARA CONSULTAR SI ERES GANADOR</p>  
+        <a href="#" class="botones__item btn__rojo" data-bs-dismiss="modal">Cerrar</a>
         </div>
-        <p class="etiqueta"><span class="verde">GUARDA TU NÚMERO DE FOLIO PARA CONSULTAR SI ERES GANADOR</p>  
-      <a href="#" class="botones__item btn__rojo" data-bs-dismiss="modal">Cerrar</a>
       </div>
     </div>
-  </div>
-</div>
+  </div> -->
 </section>
 <!-- <div id="debug">Aqui debugeo</div> -->
 <script src="view/src/js/boletosFront.js"></script>

@@ -61,14 +61,17 @@ function quitarBoletos() {
   $.ajax({
     url: 'ajax/apartadoFront.ajax.php',
     method: 'POST',
+    cache: false,
     success: function (respuesta) {
       $('#pintarBoleto').html(respuesta);
       $('#boletosApartados').html(respuesta);
+      $('#boletosMaquina').html(respuesta);
       $('.selectBoletoQuitar').on('click', function () {
         var idBoleto = $(this).attr('idBoleto');
 
         var x = new XMLHttpRequest();
         x.open('GET', 'ajax/quitarBoletos.ajax.php?idBoleto=' + idBoleto);
+        x.setRequestHeader('Cache-Control', 'no-cache');
         x.send(null);
         x.onreadystatechange = function () {
           if (x.status == 200 && x.readyState == 4) {
@@ -76,26 +79,6 @@ function quitarBoletos() {
             quitarBoletos();
           }
         };
-
-        /*var datos = new FormData();
-        datos.append('idBoleto', idBoleto);
-        $.ajax({
-          url: 'ajax/quitarBoletos.ajax.php',
-          method: 'POST',
-          data: datos,
-          cache: false,
-          contentType: false,
-          processData: false,
-          dataType: 'json',
-          success: function (respuesta2) {
-            //$('#quitarBoleto').load(location.href + ' #quitarBoleto');
-            //$('#pintarBoleto').html('Cargando boletos apartados ...');
-			$("#debug").html("Acabo el ajax quitar");
-			//cargarBoletos();
-            //quitarBoletos();
-          }
-        });		
-		*/
       });
     },
   });
@@ -106,7 +89,9 @@ $('#btnAgregarBoleto').on('click', function () {
 
   var x = new XMLHttpRequest();
   x.open('GET', 'ajax/buscaBoleto.ajax.php?numBoleto=' + numBoleto);
+  x.setRequestHeader('Cache-Control', 'no-cache');
   x.send(null);
+
   x.onreadystatechange = function () {
     if (x.status == 200 && x.readyState == 4) {
       if (x.responseText == 'NO') {
@@ -130,34 +115,29 @@ $('#btnBuscarFolio').on('click', function () {
   var numFolio = $('#folioBuscar').val();
   var x = new XMLHttpRequest();
   x.open('GET', 'ajax/buscaFolio.ajax.php?numFolio=' + numFolio);
-  x.send();
+  x.setRequestHeader('Cache-Control', 'no-cache');
+  x.send(null);
   x.onreadystatechange = function () {
     if (x.status == 200 && x.readyState == 4) {
       var myObj = JSON.parse(this.responseText);
-      console.log(myObj.length);
-      var out = '';
-      var i;
-      for (i = 0; i < myObj.length; i++) {
-        out +=
-          '<p>Folio: ' +
-          myObj[i].numFolio +
-          '</p><p>Nombre: ' +
-          myObj[i].nombre +
-          '</p><p>Ubicación: ' +
-          myObj[i].localidad +
-          '</p><p>Estatus: ' +
-          myObj[i].estatus +
-          '</p><p>Total a pagar: $' +
-          myObj[i].monto +
-          ' MXN</p><p>Boletos: ' +
-          myObj[i].boleto +
-          '</p>';
-      }
-      console.log(out);
+
       Swal.fire({
         icon: 'success',
         title: '¡Boleto(s) apartados por 12 horas!',
-        html: out,
+        html:
+          '<p>Folio: ' +
+          myObj[0].numFolio +
+          '</p><p>Nombre: ' +
+          myObj[0].nombre +
+          '</p><p>Ubicación: ' +
+          myObj[0].localidad +
+          '</p><p>Estatus: ' +
+          myObj[0].estatus +
+          '</p><p>Total a pagar: $' +
+          myObj[0].monto +
+          ' MXN</p><p>Boletos: ' +
+          myObj[0].boleto +
+          '</p>',
         footer:
           'Atencion: Este es tu boleto oficial, toma captura de pantalla y guardala',
         showConfirmButton: true,
