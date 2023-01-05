@@ -43,10 +43,10 @@
   <div class="premios">
     <h3>CON TU BOLETO LIQUIDADO PARTICIPAS POR:</h3>
     <div class="premiositem">
-      <p>🍀Jeep Sahara 2023🍀
-      <br>+ un bono de 100 mil pesos
-      <br>31 de Enero 2023
-      <br>(Pagando dentro de las primeras 12 hrs y no dejando boletos despreciados)</p>
+      <p>🍀JEEP SAHARA 2023🍀
+      <br>+ UN BONO DE 100 MIL PESOS
+      <br>31 DE ENERO 2023
+      <br>(PAGANDO DENTRO DE LAS PRIMERAS 12 HRS Y NO DEJANDO BOLETOS DESPRECIADOS)</p>
     </div>
     <h3>BONO DE PRESENTACIÓN:</h3>
     <div class="premiositem">
@@ -126,14 +126,6 @@
         </div>
         
         <div class="mostrar__boletos__seleccionado generar__seleccionado" id="boletosMaquina">
-          <?php
-/*
-            $generarBoletoFront = ControladorBoletosFront::ctrBoletoFrontSeleccionado();
-            foreach($generarBoletoFront as $key => $value){
-              echo '<div class="encerrar__boletos selectBoleto" idBoleto='.$value["id"].'>'.$value["num_boleto"].'</div>';              
-            };
-*/
-          ?>
         </div>
         <a href="#" class="botones__item btn__azul" data-bs-toggle="modal" data-bs-target="#apartarBoleto">COMPRAR BOLETO</a>
       </div>
@@ -230,44 +222,7 @@ MODAL APARTAR BOLETO
     </div>  
   </div>
 </div>
-
-
-  <!--===============================================
-  SITUACION BOLETO
-  =================================================-->
-  <!--<div class="modal fade" id="situacionBoleto" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <h5 class="modal-title">SITUACIÓN BOLETO</h5>
-          <div class="mostrar_datos_boleto">
-            php
-              $item = null;
-              $valor = null;
-              $situacionBoletoFront = ControladorBoletosFront::ctrSituacionBoletoFront($item, $valor);
-
-              foreach ($situacionBoletoFront as $key => $value) {
-                
-                echo '
-                <p class="folio">Folio: '.$value["folio"].'</p>
-                <p class="datos__ticket">Nombre: '.$value["nombre"].'</p>
-                <p class="datos__ticket">Estado: '.$value["localidad"].'</p>
-                <p class="datos__ticket">Boletos: '.$value["num_boleto"].'</p>';
-                if($value["estatus"] == 1){
-                  echo'<p class="estatus__ticket rojo" id="estatusTicket">'.$value["estatus"].'</p>';
-                }else {
-                  echo '<p class="estatus__ticket verde" id="estatusTicket">'.$value["estatus"].'</p>';
-                }
-
-              }
-            
-          </div>
-          <p class="etiqueta"><span class="verde">GUARDA TU NÚMERO DE FOLIO PARA CONSULTAR SI ERES GANADOR</p>  
-        <a href="#" class="botones__item btn__rojo" data-bs-dismiss="modal">Cerrar</a>
-        </div>
-      </div>
-    </div>
-  </div> -->
+ 
 </section>
-<!-- <div id="debug">Aqui debugeo</div> -->
+
 <script src="view/src/js/boletosFront.js"></script>
