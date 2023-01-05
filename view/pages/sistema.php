@@ -25,9 +25,7 @@
   <!-- AdminLTE App -->
   <script src="view/src/dist/js/adminlte.min.js"></script>
   <!-- SWeetAlert -->
-  <script src="view/src/plugins/sweetalert2/sweetalert2.min.js"></script>
-
-  <!-- <link rel="icon" href="view/src/img/icono.png" sizes="64x64"> -->
+  <script src="view/src/plugins/sweetalert2/sweetalert2.min.js"></script>  
 
   <title>Sorteos la Capital</title>
 
