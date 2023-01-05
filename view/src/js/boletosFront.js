@@ -120,33 +120,42 @@ $('#btnBuscarFolio').on('click', function () {
   x.onreadystatechange = function () {
     if (x.status == 200 && x.readyState == 4) {
       var myObj = JSON.parse(this.responseText);
-
-      Swal.fire({
-        icon: 'success',
-        title: '¡Boleto(s) apartados por 12 horas!',
-        html:
-          '<p>Folio: ' +
-          myObj[0].numFolio +
-          '</p><p>Nombre: ' +
-          myObj[0].nombre +
-          '</p><p>Ubicación: ' +
-          myObj[0].localidad +
-          '</p><p>Estatus: ' +
-          myObj[0].estatus +
-          '</p><p>Total a pagar: $' +
-          myObj[0].monto +
-          ' MXN</p><p>Boletos: ' +
-          myObj[0].boleto +
-          '</p>',
-        footer:
-          'Atencion: Este es tu boleto oficial, toma captura de pantalla y guardala',
-        showConfirmButton: true,
-        confirmButtonText: 'Cerrar',
-      }).then((result) => {
-        if (result.value) {
-          window.location = 'comprar';
-        }
-      });
+      console.log(myObj[0].exito);
+      if (myObj[0].exito == '1') {
+        Swal.fire({
+          icon: 'success',
+          title: '¡Boleto(s) apartados por 12 horas!',
+          html:
+            '<p>Folio: ' +
+            myObj[0].numFolio +
+            '</p><p>Nombre: ' +
+            myObj[0].nombre +
+            '</p><p>Ubicación: ' +
+            myObj[0].localidad +
+            '</p><p>Estatus: ' +
+            myObj[0].estatus +
+            '</p><p>Total a pagar: $' +
+            myObj[0].monto +
+            ' MXN</p><p>Boletos: ' +
+            myObj[0].boleto +
+            '</p>',
+          footer:
+            '<b>Atencion: Este es tu boleto oficial, toma captura de pantalla y guardala</b>',
+          showConfirmButton: true,
+          confirmButtonText: 'Ver Cuentas',
+        }).then((result) => {
+          if (result.value) {
+            window.location = 'cuentas';
+          }
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: '¡Asegurate de que el número de folio sea correcto!',
+          showConfirmButton: true,
+          confirmButtonText: 'Cerrar',
+        });
+      }
       $('#folioBuscar').val('');
     }
   };

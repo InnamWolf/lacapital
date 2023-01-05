@@ -26,7 +26,7 @@
         padding-top: 0;
         margin: 0px;
       }
-      span{
+      span {
         padding-top: 20px;
         display: block;
         color: $white;
@@ -108,8 +108,8 @@
       ::placeholder {
         color: $blackL;
       }
-      .nuevoBoleto{
-        margin:auto;
+      .nuevoBoleto {
+        margin: auto;
         display: block;
         margin-top: 20px;
       }
@@ -212,9 +212,9 @@
   background: $white;
   display: flex;
   flex-wrap: wrap;
-  overflow: scroll;
+  overflow-y: auto;
   justify-content: space-around;
-  height: 200px;
+  height: 100px;
   cursor: pointer;
   margin-top: 20px;
   @include desktop {
@@ -235,7 +235,7 @@
   align-items: center;
   margin: auto;
   padding: 10px;
-  height: 150px;
+  height: 60px;
   margin-top: 20px;
   @include desktop {
     width: 450px;

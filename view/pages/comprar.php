@@ -125,14 +125,14 @@
           </div>
         </div>
         
-        <div class="mostrar__boletos__seleccionado generar__seleccionado">
+        <div class="mostrar__boletos__seleccionado generar__seleccionado" id="boletosMaquina">
           <?php
-
+/*
             $generarBoletoFront = ControladorBoletosFront::ctrBoletoFrontSeleccionado();
             foreach($generarBoletoFront as $key => $value){
               echo '<div class="encerrar__boletos selectBoleto" idBoleto='.$value["id"].'>'.$value["num_boleto"].'</div>';              
             };
-
+*/
           ?>
         </div>
         <a href="#" class="botones__item btn__azul" data-bs-toggle="modal" data-bs-target="#apartarBoleto">COMPRAR BOLETO</a>
@@ -152,14 +152,8 @@ MODAL APARTAR BOLETO
           <form role="form" method="post" enctype="multipart/form-data">
 
           <div class="form-group">
-          <div class="mostrar__boletos__seleccionado generar__seleccionado" id="boletosApartados">
-            <?php
-              /*$aplicarBoletoFront = ControladorBoletosFront::ctrBoletoFrontSeleccionado();
-              foreach($aplicarBoletoFront as $key => $value){
-                echo '<div class="encerrar__boletos selectBoleto" idBoleto='.$value["id"].'>'.$value["num_boleto"].'</div>';
-                echo '<input type="hidden" name="apartarIdBoleto" value='.$value["id"].'>';
-              };*/
-            ?>
+            <div class="mostrar__boletos__seleccionado generar__seleccionado" id="boletosApartados">
+
             </div>
           </div>
           

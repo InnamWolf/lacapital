@@ -230,6 +230,7 @@ class ModeloBoletosFront{
 		
 		$boletosTodos = "";
 		$totalBoletos = 0;
+		$folioEncontrado = 0;
         
 		foreach ($boletoArray as $key => $value) {
 			$boletosTodos .= $value["num_boleto"].', ';
@@ -237,6 +238,7 @@ class ModeloBoletosFront{
 			$localidad = $value["localidad"];
 			$estatus = $value["estatus"];
 			$totalBoletos++;
+			$folioEncontrado = 1;
 		}
 		
 		$totalPagar = $totalBoletos * 45;
@@ -343,7 +345,7 @@ class ModeloBoletosFront{
 			break;                             
 		}
 		
-$respuestaArray = array(["numFolio" => $datos['numFolio'], "nombre" => $nombre, "localidad" => $EstadoCompleto, "estatus" => $estatus, "monto" => number_format($totalPagar,2), "boleto" => $boletosTodos]);
+$respuestaArray = array(["numFolio" => $datos['numFolio'], "nombre" => $nombre, "localidad" => $EstadoCompleto, "estatus" => $estatus, "monto" => number_format($totalPagar,2), "boleto" => $boletosTodos, "exito" => $folioEncontrado]);
 $myJSON = json_encode($respuestaArray);
 
 return $myJSON;

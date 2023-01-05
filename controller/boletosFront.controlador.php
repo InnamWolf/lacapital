@@ -160,12 +160,12 @@ class ControladorBoletosFront{
                   icon: "success",
                   title: "¡Boleto(s) apartados por 12 horas!",
 				  html: "<p>Folio: '.$respuesta.'</p><p>Nombre: '.$_POST["apartarNombre"].'</p><p>Ubicación: '.$EstadoCompleto.'</p><p>Total a pagar: $'.number_format($totalPagar,2).' MXN</p><p>Boletos: '.$boletosTodos.'</p>",
-   			      footer: "Atencion: Este es tu boleto oficial, toma captura de pantalla y guardala",
+   			      footer: "<b>Atencion: Este es tu boleto oficial, toma captura de pantalla y guardala</b>",
                   showConfirmButton: true,
-                  confirmButtonText:"Cerrar"
+                  confirmButtonText:"Ver Cuentas"
                     }).then((result) => {
                         if(result.value){
-                            window.location = "comprar";
+                            window.location = "cuentas";
                         }
                     })
               </script>';

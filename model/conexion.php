@@ -8,7 +8,7 @@ class Conexion{
    //* Local
    //* ===============================================   
    
-    /*  $link = new PDO("mysql:host=localhost;dbname=capital",
+     /*$link = new PDO("mysql:host=localhost;dbname=capital",
                     "root",
                     ""); */
 

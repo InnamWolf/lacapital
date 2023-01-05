@@ -49,7 +49,7 @@ class ControladorUsuarios{
 
                         if(result.value){
                             
-                            window.location = "sistema";
+                            window.location = "panel";
                         }
                     })
 
