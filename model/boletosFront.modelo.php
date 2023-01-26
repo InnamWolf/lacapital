@@ -219,7 +219,7 @@ class ModeloBoletosFront{
 
 	static public function mdlBuscaFolio($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("SELECT num_boleto, concat(nombre,' ',apellido) as nombre, localidad, case when estatus = 1 then 'Pago Pendiente' when estatus = 2 then 'Pagado' end estatus FROM boletos where folio = '".$datos["numFolio"]." ' and estatus <> 0");
+		$stmt = Conexion::conectar()->prepare("SELECT num_boleto, concat(nombre,' ',apellido) as nombre, localidad, case when estatus = 1 then 'Pago Pendiente' when estatus = 2 then 'Pagado' end estatus FROM boletos where folio = '".$datos["numFolio"]." ' and estatus in (1,2)");
 
 	
 		if(!($stmt -> execute())){
