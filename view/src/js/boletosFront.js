@@ -120,7 +120,6 @@ $('#btnBuscarFolio').on('click', function () {
   x.onreadystatechange = function () {
     if (x.status == 200 && x.readyState == 4) {
       var myObj = JSON.parse(this.responseText);
-      console.log(myObj[0].exito);
       if (myObj[0].exito == '1') {
         Swal.fire({
           icon: 'success',
@@ -142,10 +141,12 @@ $('#btnBuscarFolio').on('click', function () {
           footer:
             '<b>Atencion: Este es tu boleto oficial, toma captura de pantalla y guardala</b>',
           showConfirmButton: true,
-          confirmButtonText: 'Ver Cuentas',
+          confirmButtonText: 'Whatsapp',
         }).then((result) => {
           if (result.value) {
-            window.location = 'cuentas';
+            window.open(
+              'https://api.whatsapp.com/send/?phone=0000000000&type=phone_number&app_absent=0'
+            );
           }
         });
       } else {
