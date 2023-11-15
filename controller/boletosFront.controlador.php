@@ -162,11 +162,11 @@ class ControladorBoletosFront{
 				  html: "<p>Folio: '.$respuesta.'</p><p>Nombre: '.$_POST["apartarNombre"].'</p><p>Ubicación: '.$EstadoCompleto.'</p><p>Total a pagar: $'.number_format($totalPagar,2).' MXN</p><p>Boletos: '.$boletosTodos.'</p>",
    			      footer: "<b>Atencion: Este es tu boleto oficial, toma captura de pantalla y guardala</b>",
                   showConfirmButton: true,
-                  confirmButtonText:"Ver Cuentas"
+                  confirmButtonText:"Whatsapp"
                     }).then((result) => {
-                        if(result.value){
-                            window.location = "cuentas";
-                        }
+											if(result.value){
+												window.open("https://api.whatsapp.com/send/?phone=0000000000&type=phone_number&app_absent=0");
+											}
                     })
               </script>';
 
