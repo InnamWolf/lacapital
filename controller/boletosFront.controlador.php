@@ -165,7 +165,7 @@ class ControladorBoletosFront{
                   confirmButtonText:"Whatsapp"
                     }).then((result) => {
 											if(result.value){
-												window.open("https://api.whatsapp.com/send/?phone=0000000000&type=phone_number&app_absent=0");
+												window.open("https://api.whatsapp.com/send/?phone=+5215635383745&text=Hola&type=phone_number&app_absent=0");
 											}
                     })
               </script>';
