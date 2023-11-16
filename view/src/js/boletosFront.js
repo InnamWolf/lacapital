@@ -129,12 +129,10 @@ function oportunidadBoletos() {
 
 $('#btnAgregarBoleto').on('click', function () {
   var numBoleto = $('#folio').val();
-
   var x = new XMLHttpRequest();
   x.open('GET', 'ajax/buscaBoleto.ajax.php?numBoleto=' + numBoleto);
   x.setRequestHeader('Cache-Control', 'no-cache');
   x.send(null);
-
   x.onreadystatechange = function () {
     if (x.status == 200 && x.readyState == 4) {
       if (x.responseText == 'NO') {
