@@ -20,6 +20,7 @@ $('.clickMaquina').on('click', function () {
       quitarBoletos();
     },
   });
+  console.log('- cantidadBoleto -' + cantidadBoleto);
   if (cantidadBoleto < 50) {
     setTimeout(function () {
       objeto.style.display = 'none';
@@ -129,12 +130,10 @@ function oportunidadBoletos() {
 
 $('#btnAgregarBoleto').on('click', function () {
   var numBoleto = $('#folio').val();
-
   var x = new XMLHttpRequest();
   x.open('GET', 'ajax/buscaBoleto.ajax.php?numBoleto=' + numBoleto);
   x.setRequestHeader('Cache-Control', 'no-cache');
   x.send(null);
-
   x.onreadystatechange = function () {
     if (x.status == 200 && x.readyState == 4) {
       if (x.responseText == 'NO') {
@@ -180,7 +179,7 @@ $('#btnBuscarFolio').on('click', function () {
             '</p><p>Total a pagar: $' +
             myObj[0].monto +
             ' MXN</p><p>Boletos: ' +
-            myObj[0].boleto +
+            myObj[0].boletosTodos +
             '</p>',
           footer:
             '<b>Atencion: Este es tu boleto oficial, toma captura de pantalla y guardala</b>',
@@ -189,7 +188,7 @@ $('#btnBuscarFolio').on('click', function () {
         }).then((result) => {
           if (result.value) {
             window.open(
-              'https://api.whatsapp.com/send/?phone=0000000000&type=phone_number&app_absent=0'
+              'https://api.whatsapp.com/send/?phone=525526830064&type=phone_number&app_absent=0'
             );
           }
         });
