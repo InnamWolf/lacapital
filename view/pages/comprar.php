@@ -130,7 +130,6 @@
         </div>
         
         <div class="mostrar__boletos__seleccionado generar__seleccionado" id="boletosMaquina"></div>
-        <a href="#" class="botones__item btn__azul" data-bs-toggle="modal" data-bs-target="#apartarBoleto">COMPRAR BOLETO</a>
       </div>
     </div>
   </div>
