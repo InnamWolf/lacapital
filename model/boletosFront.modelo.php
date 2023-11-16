@@ -239,6 +239,9 @@ class ModeloBoletosFront{
 			$estatus = $value["estatus"];
 			$totalBoletos++;
 			$folioEncontrado = 1;
+			if($value["boletoPadre"] == null){
+				$totalBoletos++;
+			}		
 		}
 		
 		$totalPagar = $totalBoletos * 45;
@@ -350,6 +353,78 @@ $myJSON = json_encode($respuestaArray);
 
 return $myJSON;
 		
+	}
+
+  static public function mdlBoletoFrontOportunidad($tabla){
+
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla where estatus = 3 and ip = '".$_SERVER['REMOTE_ADDR']."'");
+
+		if(!($stmt -> execute())){
+			return var_dump($stmt -> errorInfo());	
+		}
+		
+		$boletoArray = $stmt -> fetchAll(); 
+		
+		$boletoElegido = "";
+		$totalBoletos = 4;
+		$elegido = "";
+		$contador = 0;
+
+		
+		foreach ($boletoArray as $key => $value) {
+			$contador++;
+			$boletoElegido = $value["num_boleto"];
+			$oportunidad = $value["oportunidad"];
+			$idBoleto = $value["id"];
+			if($oportunidad == null){
+				$stmt2 = Conexion::conectar()->prepare("SELECT ".$boletoElegido." as elegido, num_boleto as aleatorio FROM boletos where estatus = 0 order BY rand() LIMIT ".$totalBoletos);
+				if(!($stmt2 -> execute())){
+					return var_dump($stmt2 -> errorInfo());	
+				}
+				$boletoAleatorios = $stmt2 -> fetchAll(); 
+				
+				$boletosSeleccionados = "";
+				foreach ($boletoAleatorios as $key => $value2) {
+					$stmt4 = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 4, oportunidad = 1, boletoPadre = ".$boletoElegido.", ip = '".$_SERVER['REMOTE_ADDR']."' WHERE num_boleto = '".$value2["aleatorio"]."' and estatus = 0");
+					if(!($stmt4 -> execute())){
+						return var_dump($stmt4 -> errorInfo());	
+					}
+					$elegido = str_pad($value2["elegido"],5,'0',STR_PAD_LEFT);
+					$boletosSeleccionados .= $value2["aleatorio"].',';
+				}
+				$stmt3 = Conexion::conectar()->prepare("UPDATE $tabla SET oportunidad = 1 WHERE id = '".$idBoleto."' and estatus = 3 and ip = '".$_SERVER['REMOTE_ADDR']."'");
+				if(!($stmt3 -> execute())){
+					return var_dump($stmt3 -> errorInfo());	
+				}
+
+				
+			}else{
+				$stmt5 = Conexion::conectar()->prepare("SELECT boletoPadre as elegido, num_boleto as aleatorio FROM boletos where estatus = 4 and oportunidad = 1 and boletoPadre = ".$boletoElegido);
+				if(!($stmt5 -> execute())){
+					return var_dump($stmt5 -> errorInfo());	
+				}
+				$boletoAleatorios = $stmt5 -> fetchAll(); 
+				
+				$boletosSeleccionados = "";
+				foreach ($boletoAleatorios as $key => $value2) {
+					$elegido = str_pad($value2["elegido"],5,'0',STR_PAD_LEFT);
+					if($boletoElegido == $elegido){
+						$boletosSeleccionados .= $value2["aleatorio"].',';
+					}
+				}
+			}
+
+
+			if($contador != 0){
+				$respuestaArray[$contador] = array("boleto" => $elegido, "opor" => [substr($boletosSeleccionados, 0, -1)]);
+			}else {
+				$respuestaArray[$contador] = array(["boleto" => "NO", "opor" => "NO", "exito" => 0]);
+			}
+			$myJSON = json_encode($respuestaArray);
+		}
+
+		return $myJSON; 
+
 	}
 
 }

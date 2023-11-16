@@ -85,6 +85,10 @@
           
         </div>
         <a href="#" class="botones__item btn__verde apartar" data-bs-toggle="modal" data-bs-target="#apartarBoleto">APARTAR</a>
+        <div class="oportunidad__boleto" id="mostrarOportunidad">
+          <b>Oportunidades</b><br>
+          <div class="mostrar__boletos__seleccionado" id="oportunidadBoleto"></div>
+        </div>
       </div>
 
       <a href="#" class="botones__item btn__verde" data-bs-toggle="modal" data-bs-target="#generarBoleto">MÁQUINA DE LA SUERTE</a>

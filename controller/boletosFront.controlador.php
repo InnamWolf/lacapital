@@ -48,7 +48,9 @@ class ControladorBoletosFront{
         
 		foreach ($situacionBoletoFront as $key => $value) {
 			$boletosTodos .= $value["num_boleto"].', ';
-			$totalBoletos++;
+			if($value["boletoPadre"] == null){
+				$totalBoletos++;
+			}	
 		}
 		
 		$totalPagar = $totalBoletos * 45;

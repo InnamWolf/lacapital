@@ -5,5 +5,5 @@ require_once "../model/boletosFront.modelo.php";
 
 $seleccionarBoletoFront = ControladorBoletosFront::ctrBoletoFrontSeleccionado();
 foreach($seleccionarBoletoFront as $key => $value){
-  echo '<div class="encerrar__boletos selectBoletoQuitar" idBoleto="'.$value["id"].'" name="idBoletos">'.$value["num_boleto"].'</div>';       
+  echo '<div class="encerrar__boletos selectBoletoQuitar" idBoleto="'.$value["id"].'" numBoleto="'.$value["num_boleto"].'" name="idBoletos">'.$value["num_boleto"].'</div>';       
 };
