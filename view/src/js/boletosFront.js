@@ -20,10 +20,17 @@ $('.clickMaquina').on('click', function () {
       quitarBoletos();
     },
   });
-  setTimeout(function () {
-    objeto.style.display = 'none';
-    location.reload();
-  }, 10000);
+  if (cantidadBoleto < 50) {
+    setTimeout(function () {
+      objeto.style.display = 'none';
+      location.reload();
+    }, 10000);
+  } else {
+    setTimeout(function () {
+      objeto.style.display = 'none';
+      location.reload();
+    }, 180000);
+  }
 });
 
 function cargarBoletos() {
@@ -50,6 +57,7 @@ function cargarBoletos() {
             $('#quitarBoleto').html('Cargando boletos disponibles ...');
             cargarBoletos();
             quitarBoletos();
+            oportunidadBoletos();
           },
         });
       });
@@ -68,20 +76,55 @@ function quitarBoletos() {
       $('#boletosMaquina').html(respuesta);
       $('.selectBoletoQuitar').on('click', function () {
         var idBoleto = $(this).attr('idBoleto');
-
+        var numBoleto = $(this).attr('numBoleto');
         var x = new XMLHttpRequest();
-        x.open('GET', 'ajax/quitarBoletos.ajax.php?idBoleto=' + idBoleto);
+        x.open(
+          'GET',
+          'ajax/quitarBoletos.ajax.php?idBoleto=' +
+            idBoleto +
+            '&numBoleto=' +
+            numBoleto
+        );
         x.setRequestHeader('Cache-Control', 'no-cache');
         x.send(null);
         x.onreadystatechange = function () {
           if (x.status == 200 && x.readyState == 4) {
             cargarBoletos();
             quitarBoletos();
+            oportunidadBoletos();
           }
         };
       });
     },
   });
+}
+
+function oportunidadBoletos() {
+  var objeto = document.getElementById('mostrarOportunidad');
+  var x = new XMLHttpRequest();
+  x.responseType = 'json';
+  x.open('GET', 'ajax/oportunidadFront.ajax.php', true);
+  x.setRequestHeader('Cache-Control', 'no-cache');
+  x.send(null);
+  x.onreadystatechange = function () {
+    if (x.status == 200 && x.readyState == 4) {
+      var objectJS = x.response;
+      var cadena = '';
+      var i;
+      for (i in objectJS) {
+        if (objectJS | ([i] instanceof Object)) {
+          cadena +=
+            '<p>' + objectJS[i].boleto + ': [' + objectJS[i].opor + ']<br></p>';
+        }
+      }
+      if (objectJS != null) {
+        objeto.style.display = 'block';
+        $('#oportunidadBoleto').html(cadena);
+      } else {
+        objeto.style.display = 'none';
+      }
+    }
+  };
 }
 
 $('#btnAgregarBoleto').on('click', function () {
@@ -105,6 +148,7 @@ $('#btnAgregarBoleto').on('click', function () {
       } else {
         cargarBoletos();
         quitarBoletos();
+        oportunidadBoletos();
         $('#folio').val('');
       }
     }
@@ -164,3 +208,4 @@ $('#btnBuscarFolio').on('click', function () {
 
 cargarBoletos();
 quitarBoletos();
+oportunidadBoletos();
