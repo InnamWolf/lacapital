@@ -4,9 +4,9 @@
   =================================================-->
   <div class="principal">
     <div class="principal__item">
-       <span>🍀JEEP SAHARA 2023🍀</span>
+       <span>🍀HONDA CIVIC SPORT 2023🍀</span>
        <p>+ UN BONO DE 100 MIL PESOS 
-      <br>31 DE ENERO 2023</p>
+      <br>24 de Diciembre del 2023</p>
     </div>
   </div>
 
@@ -23,17 +23,18 @@
   <div class="costo">
     <h2>COSTO BOLETOS</h2>
     <div class="costo__item">
-      <p>1 BOLETO POR $45</p>
-      <p>2 BOLETOS POR $90</p>
-      <p>3 BOLETOS POR $135</p>
-      <p>4 BOLETOS POR $180</p>
-      <p>5 BOLETOS POR $225</p>
-      <p>10 BOLETOS POR $450</p>
-      <p>20 BOLETOS POR $900</p>
-      <p>30 BOLETOS POR $1,350</p>
-      <p>40 BOLETOS POR $1,800</p>
-      <p>50 BOLETOS POR $2,250</p>
-      <p>100 BOLETOS POR $4,500</p>
+      <p>(5 números por boleto)</p>
+      <p>1 BOLETO POR $90</p>
+      <p>2 BOLETOS POR $180</p>
+      <p>3 BOLETOS POR $270</p>
+      <p>4 BOLETOS POR $360</p>
+      <p>5 BOLETOS POR $450</p>
+      <p>10 BOLETOS POR $900</p>
+      <p>20 BOLETOS POR $1,800</p>
+      <p>30 BOLETOS POR $2,700</p>
+      <p>40 BOLETOS POR $3,600</p>
+      <p>50 BOLETOS POR $4,500</p>
+      <p>100 BOLETOS POR $9,000</p>
     </div>
   </div>
 
@@ -43,20 +44,31 @@
   <div class="premios">
     <h3>CON TU BOLETO LIQUIDADO PARTICIPAS POR:</h3>
     <div class="premiositem">
-      <p>🍀JEEP SAHARA 2023🍀
-      <br>+ UN BONO DE 100 MIL PESOS
-      <br>31 DE ENERO 2023
-      <br>(PAGANDO DENTRO DE LAS PRIMERAS 12 HRS Y NO DEJANDO BOLETOS DESPRECIADOS)</p>
-    </div>
-    <h3>BONO DE PRESENTACIÓN:</h3>
-    <div class="premiositem">
-      <p>+ $50,000 MXN
-      <!-- <br>PAGANDO EN LAS PRIMERAS 24 HRS DEL SORTEO -->
+      <p>🍀HONDA CIVIC SPORT 2023🍀
+        <br>24/12/2023
+        <br>NÚMERO GANADOR EN BASE A
+        <br>ÚLTIMAS 4 CIFRAS DEL 
+        <br>PRIMER PREMIO DE
+        <br>LOTERÍA NACIONAL
       </p>
     </div>
-    <h3>SEGUNDO LUGAR:</h3>
+    <h3>BONO PRONTO PAGO:</h3>
     <div class="premios__item">
-      <p>$50,000 MXN</p>
+      <p> $100,000 MXN
+      <br>VALIDO HASTA EL DIA 20 DICIEMBRE 2023
+      </p>
+    </div>
+    <h3>BONO PRSENTACION</h3>
+    <div class="premios__item">
+      <p> $100,000 MXN
+      <br>VALIDO HASTA AGOTAR EXISTENCIAS
+      </p>
+    </div>
+    <h3>BONO POR COMPARTIR LAS PUBLICACIONES</h3>
+    <div class="premios__item">
+      <p>$100,000 MXN
+      <br>VALIDO HASTA AGOTAR EXISTENCIAS
+      </p>
     </div>
   </div>
   

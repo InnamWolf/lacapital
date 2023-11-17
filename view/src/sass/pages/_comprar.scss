@@ -11,7 +11,7 @@
   // * PREMIO PRINCIPAL
   // * ===============================================
   .principal {
-    height: 100px;
+    height: 140px;
     background: $blackL;
     text-align: center;
     @include desktop {
@@ -46,7 +46,7 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      height: 150px;
+      height: 230px;
       width: 350px;
       border: solid 3px $redB;
       @include desktop {
@@ -69,9 +69,9 @@
     .costo__item {
       height: 335px;
       background: $blackL;
-      padding-top: 20px;
+      padding-top: 20px;      
       @include desktop {
-        height: 400px;
+        height: 455px;
       }
       p {
         color: $white;
