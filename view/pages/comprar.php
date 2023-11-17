@@ -5,8 +5,7 @@
   <div class="principal">
     <div class="principal__item">
        <span>🍀HONDA CIVIC SPORT 2023🍀</span>
-       <p>+ UN BONO DE 100 MIL PESOS 
-      <br>24 de Diciembre del 2023</p>
+       <p>24 de Diciembre del 2023</p>
     </div>
   </div>
 
@@ -44,8 +43,11 @@
   <div class="premios">
     <h3>CON TU BOLETO LIQUIDADO PARTICIPAS POR:</h3>
     <div class="premiositem">
-      <p>🍀HONDA CIVIC SPORT 2023🍀
-        <br>24/12/2023
+      <p>
+          <span class="txt__Verde">
+            🍀HONDA CIVIC SPORT 2023🍀
+            <br>24/12/2023 
+          </span>
         <br>NÚMERO GANADOR EN BASE A
         <br>ÚLTIMAS 4 CIFRAS DEL 
         <br>PRIMER PREMIO DE
@@ -54,20 +56,23 @@
     </div>
     <h3>BONO PRONTO PAGO:</h3>
     <div class="premios__item">
-      <p> $100,000 MXN
-      <br>VALIDO HASTA EL DIA 20 DICIEMBRE 2023
+      <p> 
+        <span class="txt__Verde">$100,000 MXN </span>
+        <br>VALIDO HASTA EL DIA 20 DICIEMBRE 2023
       </p>
     </div>
     <h3>BONO PRSENTACION</h3>
     <div class="premios__item">
-      <p> $100,000 MXN
-      <br>VALIDO HASTA AGOTAR EXISTENCIAS
+      <p> 
+        <span class="txt__Verde">$100,000 MXN </span>
+        <br>VALIDO HASTA AGOTAR EXISTENCIAS
       </p>
     </div>
     <h3>BONO POR COMPARTIR LAS PUBLICACIONES</h3>
     <div class="premios__item">
-      <p>$100,000 MXN
-      <br>VALIDO HASTA AGOTAR EXISTENCIAS
+      <p>
+        <span class="txt__Verde">$100,000 MXN </span>
+        <br>VALIDO HASTA AGOTAR EXISTENCIAS
       </p>
     </div>
   </div>
