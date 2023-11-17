@@ -50,7 +50,7 @@ class ModeloBoletos{
   //* ===============================================
   static public function mdlCancelarBoletos($tabla, $valor){
 
-    $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, nombre = null, apellido = null, telefono = null, localidad = null, folio = null  WHERE id = :valor"); 
+    $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, nombre = null, apellido = null, telefono = null, localidad = null, folio = null, ip = null, oportunidad = null, boletoPadre = null  WHERE id = :valor"); 
     
     $stmt -> bindParam(":valor",$valor, PDO::PARAM_INT);
 
