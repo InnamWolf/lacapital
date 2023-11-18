@@ -54,12 +54,16 @@ class ModeloBoletosFront{
 
   static public function mdlBoletoFrontSeleccionadoPrueba($tabla, $datos){
 
-      $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, ip = null WHERE id = :id and estatus = 3");
+      $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, ip = null, oportunidad = null WHERE id = :id and estatus = 3");
 
       $stmt -> bindParam(":id", $datos["idBoleto"], PDO::PARAM_INT);
   
       if($stmt -> execute()){      
+				$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, oportunidad = null, boletoPadre = null WHERE boletoPadre = :numBoleto");
 
+				$stmt -> bindParam(":numBoleto", $datos["numBoleto"], PDO::PARAM_INT);
+
+				$stmt -> execute();
         return "ok";
       
       }else{
@@ -115,7 +119,7 @@ class ModeloBoletosFront{
 											estatus = 1,
 											folio = '".$folio."'
 											WHERE ip = '".$_SERVER['REMOTE_ADDR']."' 
-											and estatus = 3");
+											and estatus in (3,4)");
 
   	$stmt -> bindParam(":apartarWhatsapp", $datos["apartarWhatsapp"], PDO::PARAM_STR);
 	$stmt -> bindParam(":apartarNombre", $datos["apartarNombre"], PDO::PARAM_STR);
@@ -145,7 +149,7 @@ class ModeloBoletosFront{
 
   static public function mdlSituacionBoletoFront($tabla, $folio){
 
-      $stmt = Conexion::conectar()->prepare("SELECT num_boleto FROM $tabla where folio = '".$folio."'");
+      $stmt = Conexion::conectar()->prepare("SELECT num_boleto, boletoPadre FROM $tabla where folio = '".$folio."'");
   
       $stmt -> execute();
   
@@ -219,7 +223,7 @@ class ModeloBoletosFront{
 
 	static public function mdlBuscaFolio($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("SELECT num_boleto, concat(nombre,' ',apellido) as nombre, localidad, case when estatus = 1 then 'Pago Pendiente' when estatus = 2 then 'Pagado' end estatus FROM boletos where folio = '".$datos["numFolio"]." ' and estatus in (1,2)");
+		$stmt = Conexion::conectar()->prepare("SELECT num_boleto, concat(nombre,' ',apellido) as nombre, localidad, case when estatus = 1 then 'Pago Pendiente' when estatus = 2 then 'Pagado' end estatus, boletoPadre FROM boletos where folio = '".$datos["numFolio"]." ' and estatus in (1,2)");
 
 	
 		if(!($stmt -> execute())){
@@ -237,14 +241,13 @@ class ModeloBoletosFront{
 			$nombre = $value["nombre"];
 			$localidad = $value["localidad"];
 			$estatus = $value["estatus"];
-			$totalBoletos++;
 			$folioEncontrado = 1;
 			if($value["boletoPadre"] == null){
 				$totalBoletos++;
 			}		
 		}
 		
-		$totalPagar = $totalBoletos * 45;
+		$totalPagar = $totalBoletos * 90;
 
 		switch ($localidad) {
 		  case 1:

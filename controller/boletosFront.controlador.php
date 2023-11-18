@@ -53,7 +53,7 @@ class ControladorBoletosFront{
 			}	
 		}
 		
-		$totalPagar = $totalBoletos * 45;
+		$totalPagar = $totalBoletos * 90;
 
 		switch ($_POST["apartarEstado"]) {
 		  case 1:
@@ -166,13 +166,14 @@ class ControladorBoletosFront{
                   showConfirmButton: true,
                   confirmButtonText:"Whatsapp"
                     }).then((result) => {
-											if(result.value){
+											if(result.isConfirmed){
 												window.open("https://api.whatsapp.com/send/?phone=+5215635383745&text=Hola&type=phone_number&app_absent=0");
+											}else{
+												window.location = "comprar";
 											}
                     })
               </script>';
-
-            return;
+							return ;
       }else {
         echo'<script>
                 Swal.fire({
@@ -182,12 +183,12 @@ class ControladorBoletosFront{
                   confirmButtonText:"Cerrar"
                     }).then((result) => {
                         if(result.value){
-                            window.location = "comprar";
+													window.location = "comprar";
                         }
                     })
               </script>';
 
-            return;
+							return;
       }
 
     }
