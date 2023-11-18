@@ -139,7 +139,7 @@ $('#btnAgregarBoleto').on('click', function () {
         Swal.fire({
           icon: 'error',
           title: 'El numero de boleto elegido ya no esta disponible',
-          showConfirmButton: true,
+          showConfirmButton: false,
           confirmButtonText: 'Cerrar',
         });
         $('#folio').val('');
@@ -182,7 +182,7 @@ $('#btnBuscarFolio').on('click', function () {
             '</p>',
           footer:
             '<b>Atencion: Este es tu boleto oficial, toma captura de pantalla y guardala</b>',
-          showConfirmButton: true,
+          showConfirmButton: false,
           confirmButtonText: 'Whatsapp',
         }).then((result) => {
           if (result.value) {
