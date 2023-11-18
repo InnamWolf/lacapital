@@ -96,24 +96,21 @@
     <div class="boleto__botones">
       <input type="text" id="folio" name="folio" class="botones__item" placeholder="Escribe tu # de boleto" maxlength="5" pattern="[0-9]{5}">
       <button class="nuevoBoleto" id="btnAgregarBoleto">Agregar boleto</button>
+      </div>
+  </div>
 
+  <div class="boleto">
+    <div class="boleto__botones">
       <div class="apartar__boletos">
-        <div class="mostrar__boletos__seleccionado" id="pintarBoleto">
-          
-        </div>
+        <div class="mostrar__boletos__seleccionado" id="pintarBoleto"></div>
         <a href="#" class="botones__item btn__verde apartar" data-bs-toggle="modal" data-bs-target="#apartarBoleto">APARTAR</a>
         <div class="oportunidad__boleto" id="mostrarOportunidad">
           <b>Oportunidades</b><br>
           <div class="mostrar__boletos__seleccionado" id="oportunidadBoleto"></div>
         </div>
       </div>
-
       <a href="#" class="botones__item btn__verde" data-bs-toggle="modal" data-bs-target="#generarBoleto">MÁQUINA DE LA SUERTE</a>
-      
-      <div class="mostrar__boletos" id="quitarBoleto">
-            Cargando boletos disponibles ...
-      </div>
-    
+      <div class="mostrar__boletos" id="quitarBoleto">Cargando boletos disponibles ...</div>
     </div>
   </div>
 
