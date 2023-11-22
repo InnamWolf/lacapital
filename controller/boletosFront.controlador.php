@@ -53,7 +53,7 @@ class ControladorBoletosFront{
 			}	
 		}
 		
-		$totalPagar = $totalBoletos * 90;
+		$totalPagar = $totalBoletos * 99;
 
 		switch ($_POST["apartarEstado"]) {
 		  case 1:
