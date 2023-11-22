@@ -369,7 +369,7 @@ return $myJSON;
 		$boletoArray = $stmt -> fetchAll(); 
 		
 		$boletoElegido = "";
-		$totalBoletos = 4;
+		$totalBoletos = 3;
 		$elegido = "";
 		$contador = 0;
 
