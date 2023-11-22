@@ -247,7 +247,7 @@ class ModeloBoletosFront{
 			}		
 		}
 		
-		$totalPagar = $totalBoletos * 90;
+		$totalPagar = $totalBoletos * 99;
 
 		switch ($localidad) {
 		  case 1:
