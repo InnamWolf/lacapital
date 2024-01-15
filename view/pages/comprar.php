@@ -41,41 +41,38 @@
   PREMIOS
   =================================================-->
   <div class="premios">
-    <h3>CON TU BOLETO LIQUIDADO PARTICIPAS POR:</h3>
+    <!-- <h3>CON TU BOLETO LIQUIDADO PARTICIPAS POR:</h3> -->
     <div class="premiositem">
       <p>
           <span class="txt__Verde">
-            🍀HONDA CIVIC SPORT 2024🍀
-            <br>27/02/2024 
+            🍀HONDA CIVIC SPORT 🏎️💨 2024🍀
+            <br> Fecha de finalización 27/02/2024 
           </span>
-        <br>NÚMERO GANADOR EN BASE A
-        <br>ÚLTIMAS 5 CIFRAS DEL 
-        <br>PRIMER PREMIO DE
+        <br>NÚMERO GANADOR CON  BASE EN LAS
+        <br>ÚLTIMAS 5 CIFRAS DE LA
         <br>LOTERÍA NACIONAL
       </p>
     </div>
-    <h3>BONO PRONTO PAGO:</h3>
+    <h3>+ BONO DE PRESENTACIÓN:</h3>
     <div class="premios__item">
       <p> 
         <span class="txt__Verde">$100,000 MXN </span>
-        <br>VALIDO HASTA EL DIA 20 DICIEMBRE 2023
-      </p>
-    </div>
-    <h3>BONO PRSENTACIÓN</h3>
-    <div class="premios__item">
-      <p> 
-        <span class="txt__Verde">$100,000 MXN </span>
-        <br>EXTRAS COMPRANDO DENTRO DE LAS PRIMERAS  2 SEMANAS  DEL EVENTO.
-
+        <br>VÁLIDO HASTA El 15 DE FEBRERO
       </p>
     </div>
     <h3>BONO ADICIONAL</h3>
     <div class="premios__item">
-      <p>
+      <p> 
         <span class="txt__Verde">$50,000 MXN </span>
-        <br>EN LA COMPRA DE 2 NÚMEROS O MÁS.
+        <br>EN LA COMPRA DE 2 BOLETOS 🎟️ O MÁS.
       </p>
     </div>
+    <p>
+      Nota 📝 los bonos serán aplicados para todos los boletos liquidados durante las primeras 6 hrs de reserva sin dejar ningún despreciado.
+    </p>
+    <p>
+      Mucha suerte y éxito a todos.
+    </p>
   </div>
   
   <!--===============================================
