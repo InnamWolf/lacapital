@@ -98,10 +98,6 @@
       }
     }
 
-    .txt__Verde {
-      color: $green;
-      font-weight: bold;
-    }
   }
   // * ===============================================
   // * BUSCAR BOLETO
@@ -257,4 +253,10 @@
     margin-top: 5px;
     margin-bottom: 5px;
   }
+}
+
+.txt__Verde {
+  color: $green;
+  font-weight: bold;
+  text-transform: uppercase;
 }

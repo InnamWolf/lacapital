@@ -4,8 +4,8 @@
   =================================================-->
   <div class="principal">
     <div class="principal__item">
-       <span>🍀HONDA CIVIC SPORT 2023🍀</span>
-       <p>24 de Diciembre del 2023</p>
+       <span>🍀HONDA CIVIC SPORT 2024🍀</span>
+       <p>27 de Febrero del 2024</p>
     </div>
   </div>
 
@@ -22,18 +22,18 @@
   <div class="costo">
     <h2>COSTO BOLETOS</h2>
     <div class="costo__item">
-      <p>(5 números por boleto)</p>
-      <p>1 BOLETO POR $90</p>
-      <p>2 BOLETOS POR $180</p>
-      <p>3 BOLETOS POR $270</p>
-      <p>4 BOLETOS POR $360</p>
-      <p>5 BOLETOS POR $450</p>
-      <p>10 BOLETOS POR $900</p>
-      <p>20 BOLETOS POR $1,800</p>
-      <p>30 BOLETOS POR $2,700</p>
-      <p>40 BOLETOS POR $3,600</p>
-      <p>50 BOLETOS POR $4,500</p>
-      <p>100 BOLETOS POR $9,000</p>
+      <p><span class="txt__Verde">(4 números por boleto)</span></p>
+      <p>1 BOLETO POR $99</p>
+      <p>2 BOLETOS POR $198</p>
+      <p>3 BOLETOS POR $297</p>
+      <p>4 BOLETOS POR $396</p>
+      <p>5 BOLETOS POR $495</p>
+      <p>10 BOLETOS POR $990</p>
+      <p>20 BOLETOS POR $1,980</p>
+      <p>30 BOLETOS POR $2,970</p>
+      <p>40 BOLETOS POR $3,960</p>
+      <p>50 BOLETOS POR $4,950</p>
+      <p>100 BOLETOS POR $9,900</p>
     </div>
   </div>
 
@@ -45,11 +45,11 @@
     <div class="premiositem">
       <p>
           <span class="txt__Verde">
-            🍀HONDA CIVIC SPORT 2023🍀
-            <br>24/12/2023 
+            🍀HONDA CIVIC SPORT 2024🍀
+            <br>27/02/2024 
           </span>
         <br>NÚMERO GANADOR EN BASE A
-        <br>ÚLTIMAS 4 CIFRAS DEL 
+        <br>ÚLTIMAS 5 CIFRAS DEL 
         <br>PRIMER PREMIO DE
         <br>LOTERÍA NACIONAL
       </p>
@@ -61,18 +61,19 @@
         <br>VALIDO HASTA EL DIA 20 DICIEMBRE 2023
       </p>
     </div>
-    <h3>BONO PRSENTACION</h3>
+    <h3>BONO PRSENTACIÓN</h3>
     <div class="premios__item">
       <p> 
         <span class="txt__Verde">$100,000 MXN </span>
-        <br>VALIDO HASTA AGOTAR EXISTENCIAS
+        <br>EXTRAS COMPRANDO DENTRO DE LAS PRIMERAS  2 SEMANAS  DEL EVENTO.
+
       </p>
     </div>
-    <h3>BONO POR COMPARTIR LAS PUBLICACIONES</h3>
+    <h3>BONO ADICIONAL</h3>
     <div class="premios__item">
       <p>
-        <span class="txt__Verde">$100,000 MXN </span>
-        <br>VALIDO HASTA AGOTAR EXISTENCIAS
+        <span class="txt__Verde">$50,000 MXN </span>
+        <br>EN LA COMPRA DE 2 NÚMEROS O MÁS.
       </p>
     </div>
   </div>

@@ -23,7 +23,7 @@
     <h2 class="titleTitulo">PREGUNTAS FRECUENTES</h2>
     <div class="inPreguntas">
       <h3>¿CÓMO SE ELIGE A LOS GANADORES?</h3>
-      <p>Todos nuestros sorteos se realizan en base a la <span class="colorAzul">Lotería Nacional para la Asistencia Pública</span> mexicana.</p>
+      <p>Todos nuestros sorteos se realizan con base en la <span class="colorAzul">Lotería Nacional para la Asistencia Pública</span> mexicana.</p>
       <p>El ganador de Lotto Sorteos será el participante cuyo número de boleto coincida con las últimas cifras del primer premio ganador de la Lotería Nacional (las fechas serán publicadas en nuestra página oficial).​</p>
 
       <h3>¿QUÉ SUCEDE CUANDO EL NÚMERO GANADOR ES UN BOLETO NO VENDIDO?</h3>
@@ -54,7 +54,7 @@
     <h2 class="titleTitulo">NOSOTROS</h2>
     <div class="inImg">
       <div class="txtNosotros">
-        <p>SORTEOS ENTRE AMIGOS EN BASE A LOTERIA NACIONAL.</p>
+        <p>SORTEOS ENTRE AMIGOS CON BASE EN LA LOTERIA NACIONAL.</p>
         <p>TODOS NUESTROS SORTEOS SE REALIZAN DE FORMA SEGURA Y TRANSPARENTE EN BASE A LOS NÚMEROS GANADORES DE LA LOTERÍA NACIONAL Y CON TRANSMISIÓN EN VIVO.</p>
       </div>
       <img src="view/src/img/logo.svg" alt="logo">

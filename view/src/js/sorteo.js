@@ -20,7 +20,7 @@ $( ".nuevoSorteo" ).on( "click", function() {
         Swal.fire({
 
           icon: "success",
-          title: "Se han generado 80,000 boletos nuevos",
+          title: "Se han generado 60,000 boletos nuevos",
           showConfirmButton: true,
           confirmButtonText:"Cerrar"
 
