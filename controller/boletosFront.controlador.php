@@ -53,7 +53,7 @@ class ControladorBoletosFront{
 			}	
 		}
 		
-		$totalPagar = $totalBoletos * 99;
+		$totalPagar = $totalBoletos * 99; //cambio de precio
 
 		switch ($_POST["apartarEstado"]) {
 		  case 1:

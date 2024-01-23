@@ -247,7 +247,7 @@ class ModeloBoletosFront{
 			}		
 		}
 		
-		$totalPagar = $totalBoletos * 99;
+		$totalPagar = $totalBoletos * 99; //cambiar para costo
 
 		switch ($localidad) {
 		  case 1:
@@ -369,7 +369,7 @@ return $myJSON;
 		$boletoArray = $stmt -> fetchAll(); 
 		
 		$boletoElegido = "";
-		$totalBoletos = 3;
+		$totalBoletos = 3; // total oportunidades
 		$elegido = "";
 		$contador = 0;
 
