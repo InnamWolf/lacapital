@@ -41,7 +41,7 @@
         <p class="colorVerde">ENVÍANOS TUS PREGUNTAS A</p>
         <div class="redes__iconos">
           <a href="https://api.whatsapp.com/send/?phone=5215635383745&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=100088281957179&mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61555495876122"><i class="fa-brands fa-facebook"></i></a>
         </div>
       </div>
     </div>
@@ -70,7 +70,7 @@
       <p>WHATSAPP: (52) 1-56-3538-3745 <br> (52) 56-3538-3770</p>
       <div class="contacto__iconos">
         <a href="https://api.whatsapp.com/send/?phone=5215635383745&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100088281957179&mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61555495876122"><i class="fa-brands fa-facebook"></i></a>
       </div>
       <!-- <div class="imgInfo"></div> -->
     </div>
