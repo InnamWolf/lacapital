@@ -185,8 +185,8 @@ MODAL APARTAR BOLETO
             Estado
             =================================================-->
             <div class="form-group">
-                <select class="form-control" aria-label="selEstado" id="apartarEstado" name="apartarEstado">
-                  <option selected>-- SELECCIONE --</option>
+                <select class="form-control" aria-label="selEstado" id="apartarEstado" name="apartarEstado" required >
+                  <option selected value="">-- SELECCIONE --</option>
                   <option value="1">AGUASCALIENTES</option>
                   <option value="2">BAJA CALIFORNIA</option>
                   <option value="3">BAJA CALIFORNIA SUR</option>
