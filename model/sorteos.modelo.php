@@ -18,10 +18,6 @@ class ModeloSorteos{
 
 		}
 
-		$stmt -> close();
-
-		$stmt = null;
-
   }
 
 }

@@ -1,16 +1,11 @@
 <?php
-
-require_once "../controller/sorteos.controlador.php";
 require_once "../model/sorteos.modelo.php";
 
-class AjaxSorteos{
-   
-
+class AjaxSorteos{  
     public $nuevo;
-    
 
   //* ===============================================
-  //* VALIDAR BOLETOS 2
+  //* GENERAR NUEVA RIFA 2
   //* ===============================================
 
     public function ajaxNuevoSorteo(){
@@ -27,14 +22,14 @@ class AjaxSorteos{
 }
 
   //* ===============================================
-  //* VALIDAR BOLETOS 1
+  //* GENERAR NUEVA RIFA 1
   //* ===============================================
   
   if(isset($_POST["nuevo"])){         
     
-    $pagar = new AjaxSorteos();
-    $pagar -> idBoleto = $_POST["nuevo"];
-    $pagar -> ajaxNuevoSorteo();        
+    $nuevo = new AjaxSorteos();
+    $nuevo -> nuevo = $_POST["nuevo"];
+    $nuevo -> ajaxNuevoSorteo();        
 
   }
 

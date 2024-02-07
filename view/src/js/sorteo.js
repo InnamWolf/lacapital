@@ -1,5 +1,7 @@
-$( ".nuevoSorteo" ).on( "click", function() {
-  
+const button = document.querySelector(".nuevoSorteo");
+
+button.addEventListener("click", (e) => {
+
   var nuevo = 'nuevo';
   var datos = new FormData();   
   datos.append("nuevo", nuevo);
@@ -53,5 +55,6 @@ $( ".nuevoSorteo" ).on( "click", function() {
     }
 
    });  
+ 
+});
 
-})
