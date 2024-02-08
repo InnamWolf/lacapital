@@ -113,7 +113,7 @@
   </div>
 
   <!--===============================================
-  GENERAR BOLETO
+  GENERAR BOLETO MAQUINA DE LA SUERTE
   =================================================-->
   <div class="modal fade" id="generarBoleto" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">

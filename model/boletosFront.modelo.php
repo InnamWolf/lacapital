@@ -30,9 +30,6 @@ class ModeloBoletosFront{
 
     }
 
-    $stmt -> close();
-    $stmt = null;    
-
   }
 
   //* ===============================================
@@ -47,30 +44,33 @@ class ModeloBoletosFront{
   
       return $stmt -> fetchAll();
     
-    $stmt -> close();
-    $stmt = null;    
-
   }
 
   static public function mdlBoletoFrontSeleccionadoPrueba($tabla, $datos){
 
-      $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, ip = null, oportunidad = null WHERE id = :id and estatus = 3");
+      $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, ip = null, oportunidad = null WHERE (id = :id  or boletoPadre = :numBoleto) and estatus in (3,4)");
 
       $stmt -> bindParam(":id", $datos["idBoleto"], PDO::PARAM_INT);
+	  $stmt -> bindParam(":numBoleto", $datos["numBoleto"], PDO::PARAM_INT);
+
+	  $stmt -> execute();
+
+	  return "ok";
   
-      if($stmt -> execute()){      
-				$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, oportunidad = null, boletoPadre = null WHERE boletoPadre = :numBoleto");
+    //   if($stmt -> execute()){      
+	// 			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, oportunidad = null, boletoPadre = null WHERE boletoPadre = :numBoleto");
+	// 			//$stmtA = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 0, nombre = null, apellido = null, telefono = null, localidad = null, folio = null, ip = null, oportunidad = null, boletoPadre = null WHERE boletoPadre = :numBoleto");
 
-				$stmt -> bindParam(":numBoleto", $datos["numBoleto"], PDO::PARAM_INT);
+	// 			$stmtA -> bindParam(":numBoleto", $datos["numBoleto"], PDO::PARAM_INT);
 
-				$stmt -> execute();
-        return "ok";
+	// 			$stmtA -> execute();
+    //     return "ok";
       
-      }else{
+    //   }else{
   
-        return "error";	
+    //     return "error";	
   
-      }      
+    //   }      
 
   }
 
@@ -90,8 +90,6 @@ class ModeloBoletosFront{
 
 		}
 
-		$stmt -> close();
-		$stmt = null;
 
 	}
 
@@ -136,10 +134,6 @@ class ModeloBoletosFront{
 
 		}
 
-		$stmt -> close();
-
-		$stmt = null;
-
 	}
   
 
@@ -153,10 +147,7 @@ class ModeloBoletosFront{
   
       $stmt -> execute();
   
-      return $stmt -> fetchAll();      
-
-    $stmt -> close();
-    $stmt = null;    
+      return $stmt -> fetchAll();        
 
   }
   
@@ -379,6 +370,7 @@ return $myJSON;
 			$boletoElegido = $value["num_boleto"];
 			$oportunidad = $value["oportunidad"];
 			$idBoleto = $value["id"];
+
 			if($oportunidad == null){
 				$stmt2 = Conexion::conectar()->prepare("SELECT ".$boletoElegido." as elegido, num_boleto as aleatorio FROM boletos where estatus = 0 order BY rand() LIMIT ".$totalBoletos);
 				if(!($stmt2 -> execute())){
@@ -387,6 +379,7 @@ return $myJSON;
 				$boletoAleatorios = $stmt2 -> fetchAll(); 
 				
 				$boletosSeleccionados = "";
+				
 				foreach ($boletoAleatorios as $key => $value2) {
 					$stmt4 = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = 4, oportunidad = 1, boletoPadre = ".$boletoElegido.", ip = '".$_SERVER['REMOTE_ADDR']."' WHERE num_boleto = '".$value2["aleatorio"]."' and estatus = 0");
 					if(!($stmt4 -> execute())){
@@ -399,7 +392,6 @@ return $myJSON;
 				if(!($stmt3 -> execute())){
 					return var_dump($stmt3 -> errorInfo());	
 				}
-
 				
 			}else{
 				$stmt5 = Conexion::conectar()->prepare("SELECT boletoPadre as elegido, num_boleto as aleatorio FROM boletos where estatus = 4 and oportunidad = 1 and boletoPadre = ".$boletoElegido);

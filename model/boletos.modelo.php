@@ -38,9 +38,6 @@ class ModeloBoletos{
 
 		}
 
-		$stmt -> close();
-
-		$stmt = null;
 
   }
 
@@ -63,10 +60,6 @@ class ModeloBoletos{
 			return "error";	
 
 		}
-
-		$stmt -> close();
-
-		$stmt = null;
 
   }
 
